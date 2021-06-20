@@ -15,9 +15,9 @@ Here on my website you can find a few of my recent projects, so please have a lo
 
 #menu
 menu:
-  Works: /Works
-  About: /About
-  Odds and Ends: /Odds
+  Works: /works
+  About: /about
+  Odds and Ends: /odds
 
 #index/main page max show posts (in number)
 max_post: 4
