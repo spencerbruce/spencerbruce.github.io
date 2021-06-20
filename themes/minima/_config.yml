@@ -18,8 +18,6 @@ menu:
   Works: /works
   About: /about
   Odds and Ends: /odds
-  Wowow: wowow
-  Wow: wow
 
 #index/main page max show posts (in number)
 max_post: 4
