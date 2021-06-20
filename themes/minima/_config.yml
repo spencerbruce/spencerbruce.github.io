@@ -1,0 +1,59 @@
+#title in header
+title: "Hiya!"
+
+#main info
+#owner
+owner: "My name is Spencer Bruce"
+email: spencer@spencergb.me
+info: "Thanks for stopping by!"
+# info: "A student and creator based in NYC 🍎"
+#description
+desc: "I am a recent graduate from Columbia University with a BS in Computer Science on the Vision and Graphics track. 
+I had a bunch of fun exploring other classes, too, like ** and ** and I found myself completing a Sociology minor, too!
+I love to learn and help others learn, and my interests include sustainability, crafting, baking, Thai food, reading, and running. 
+Here on my website you can find a few of my recent projects, so please have a look around and drop me a line if you'd like to collaborate!"
+
+#menu
+menu:
+  Works: /Works
+  About: /About
+  Odds and Ends: /Odds
+
+#index/main page max show posts (in number)
+max_post: 4
+
+# Colors use hex color without #
+# Theme color
+tcolor: 8FB788
+
+# Define path to user css
+#(could be also located outside of theme)
+# Relative to source/ directory
+usercss: css/user.css
+
+# social profile at the footer/bottom
+footer: true
+placename: NYC
+placelink: https://www.youtube.com/watch?v=_W44NZvHc9I
+github: https://github.com/spencerbruce
+linkedin: https://linkedin.com/in/spencergbruce
+twitter: https://twitter.com/spencergbruce
+instagram: https://instagram.com/spencergbruce
+
+
+# Misc
+nanobar: /js/nanobar.min.js
+switch_light: 🌃
+switch_dark: 🌇
+
+# favicon
+favicon: /images/favicon.png
+# thumbnail
+# thumbnail: /images/thumbnail.jpg
+
+# article:
+#   thumbnail: true
+
+# DISQUS comments (sign up to Disqus to get disqus_shortname)
+# disqus_enabled: false
+# disqus_shortname: 
