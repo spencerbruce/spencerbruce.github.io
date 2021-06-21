@@ -1,11 +1,11 @@
 #title in header
-title: "Hiya!"
+title: "hiya, my name's spencer"
 
 #main info
 #owner
-owner: "My name is Spencer Bruce"
+owner: "Thanks for stopping by!"
 email: spencer@spencergb.me
-info: "Thanks for stopping by!"
+info: ""
 # info: "A student and creator based in NYC 🍎"
 #description
 desc: "I am a recent graduate from Columbia University with a BS in Computer Science on the Vision and Graphics track. 
@@ -24,7 +24,7 @@ max_post: 4
 
 # Colors use hex color without #
 # Theme color
-tcolor: 8FB788
+tcolor: 6ab1c4
 
 # Define path to user css
 #(could be also located outside of theme)
@@ -39,6 +39,8 @@ github: https://github.com/spencerbruce
 linkedin: https://linkedin.com/in/spencergbruce
 twitter: https://twitter.com/spencergbruce
 instagram: https://instagram.com/spencergbruce
+youtube: # https://www.youtube.com/user/SpencerBrucee
+tiktok: # https://www.tiktok.com/@spun.cer
 
 
 # Misc

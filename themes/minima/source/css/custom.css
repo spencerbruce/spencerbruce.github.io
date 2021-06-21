@@ -247,6 +247,15 @@ a.footer-link:focus {
 .instagram {
   fill: #E4405F
 }
+.email {
+  fill: #242424
+}
+.tiktok {
+  fill: ##000000
+}
+.youtube {
+  fill: #FF0000
+}
 
 .nanobar {
   left: 0;

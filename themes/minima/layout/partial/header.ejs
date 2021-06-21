@@ -25,7 +25,7 @@
     </h1>
   </div>
 
-  <div class="six columns ml-1">
+  <div class="nine columns ml-1">
     <h1 class="mt-2">
       <%= theme.title %>
     </h1>
@@ -40,13 +40,13 @@
           <a href="<%- url_for(theme.menu[name]) %>" class="ml"><%- name %></a>
           <% } %>
         <% } %>
-        <% if (theme.email) { %>
+        <!-- <% if (theme.email) { %>
           <% if (typeof obfuscate === "function") { %>
             <a href="mailto:<%- obfuscate(theme.email) %>" target="_blank" class="ml">Email</a>
           <% } else { %>
             <a href="mailto:<%= theme.email %>" target="_blank" class="ml">Email</a>
           <% } %>
-        <% } %>
+        <% } %> -->
       </div>
     </div>
     <hr style="margin-bottom: 2.6rem">
