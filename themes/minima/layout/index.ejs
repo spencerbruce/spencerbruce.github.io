@@ -1,13 +1,56 @@
+<!-- <div class="row">
+  <div class="twelve columns">
+    <div class="glide">
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+          Prev
+        </button>
+      </div>
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide"><img class="u-max-full-width" src="<%- theme.coverimages %>" alt="<%- theme.coveralts %>"></li>
+          <li class="glide__slide"><img class="u-max-full-width" src="<%- theme.coverimages2 %>" alt="<%- theme.coveralts %>"></li>
+          <li class="glide__slide"><img class="u-max-full-width" src="<%- theme.coverimages %>" alt="<%- theme.coveralts %>"></li>
+          <li class="glide__slide"><img class="u-max-full-width" src="<%- theme.coverimages2 %>" alt="<%- theme.coveralts %>"></li>
+          <li class="glide__slide"><img class="u-max-full-width" src="<%- theme.coverimages %>" alt="<%- theme.coveralts %>"></li>
+        </ul>
+      </div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
 <div class="row">
-  <div class="column">
+  <div class="twelve columns">
     <!-- Main information, edit it on theme/_config.yml -->
     <h2 class="mb-2"><%= theme.owner %></h2>
-    <p><%= theme.info %></p>
-    <p><%= theme.desc %></p>
+    <h2><%= theme.info %></h2>
   </div>
 </div>
 
-<h3>Recent Posts</h3>
+<div class="row mt-1">
+  <div class="six columns">
+    <img class="u-max-full-width" src="<%- theme.coverimages %>" alt="<%- theme.coveralts %>"> 
+  </div>
+
+  <div class="six columns">
+    <% theme.desc.forEach(function(d){ %>
+      <p><%= d %></p>
+    <% }) %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="twelve columns">
+    <p><%= theme.subdesc %></p>
+  </div>
+</div>
+
+<h2>some of my work</h2>
 
 <% site.posts.sort('date', 'desc').limit(theme.max_post).forEach(function(post){ %>
 <div class="row">

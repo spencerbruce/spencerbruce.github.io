@@ -3,15 +3,27 @@ title: "hiya, my name's spencer"
 
 #main info
 #owner
-owner: "Thanks for stopping by!"
+owner: # "Spencer Bruce"
 email: spencer@spencergb.me
-info: ""
-# info: "A student and creator based in NYC 🍎"
+info: "thanks for popping by! here's a bit about me:"
 #description
-desc: "I am a recent graduate from Columbia University with a BS in Computer Science on the Vision and Graphics track. 
-I had a bunch of fun exploring other classes, too, like ** and ** and I found myself completing a Sociology minor, too!
-I love to learn and help others learn, and my interests include sustainability, crafting, baking, Thai food, reading, and running. 
-Here on my website you can find a few of my recent projects, so please have a look around and drop me a line if you'd like to collaborate!"
+desc: ["I am a recent graduate from Columbia University, where I recieved a B.S. in Computer Science on the Vision, Graphics, Interaction, & Robotics track.","While a student, I had loads of fun exploring the creative process and diversified my courseload with sociology, sustainability, and manufacturing courses. Outside of the classroom, I filled my time mentoring students in my job as a TA, tinkering in our Makerspaces, and trying new sweets around the Big Apple.", "My interests bring me to too many niche topics to count, but some of my current favorites include: sustainability, crafting, baking, Thai food, reading, and running."]
+subdesc: "Here on my website you can find a few of my featured projects. Please have a look around and drop me a line if you'd like to collaborate!"
+coverimages: /images/headshot.jpg
+# coverimages2: /images/epic-smiley.jpg
+# coverimages: [/images/headshot.jpg,/images/headshot.jpg]
+coveralts: "A photo of Spencer in front of Columbia University's Low Library. He is smiling, wearing a white collared shirt underneath a black sweater. On top of this he wears an unzipped light blue graduation gown. In the background you can see trees and the top of Riverside Church."
+
+# Carousel of images
+# cover : 
+#   showPrevNext : true # Whether to display the left and right toggle buttons.
+#   showIndicators : true # Whether to display the indicators. 
+#   autoLoop : true # Whether it is automatically rotated. 
+#   duration : 120  # Switching delay time. 
+#   intervalTime : 5000  # Automatically switch the interval of the next one. 
+#   useConfig : false # Whether to use the configuration file, configure recommended articles under _data/covers.json, false use the configuration of the theme in the article cover coverImg 
+#   # useConfig How to use: Move the theme hexo-theme-matery/source/_data/covers.json to my-blog/source/_data/ and modify the configuration 
+
 
 #menu
 menu:
@@ -42,9 +54,13 @@ instagram: https://instagram.com/spencergbruce
 youtube: # https://www.youtube.com/user/SpencerBrucee
 tiktok: # https://www.tiktok.com/@spun.cer
 
-
 # Misc
 nanobar: /js/nanobar.min.js
+glide: 
+  js: ../../../node_modules/@glidejs/glide
+  core_css: /css/glide.core.min.css
+  theme_css: /css/glide.theme.min.css
+
 switch_light: 🌃
 switch_dark: 🌇
 
