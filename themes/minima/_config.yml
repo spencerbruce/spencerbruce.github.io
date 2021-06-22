@@ -5,9 +5,9 @@ title: "hiya, my name's spencer"
 #owner
 owner: # "Spencer Bruce"
 email: spencer@spencergb.me
-info: "thanks for popping by! here's a bit about me:"
+info: "thanks for stopping by! here's a bit about me:"
 #description
-desc: ["I am a recent graduate from Columbia University, where I recieved a B.S. in Computer Science on the Vision, Graphics, Interaction, & Robotics track.","While a student, I had loads of fun exploring the creative process and diversified my courseload with sociology, sustainability, and manufacturing courses. Outside of the classroom, I filled my time mentoring students in my job as a TA, tinkering in our Makerspaces, and trying new sweets around the Big Apple.", "My interests bring me to too many niche topics to count, but some of my current favorites include: sustainability, crafting, baking, Thai food, reading, and running."]
+desc: ["I am a recent graduate from Columbia University, where I recieved a B.S. in Computer Science on the Vision, Graphics, Interaction, & Robotics track.","While a student, I had loads of fun exploring the creative process and diversified my courseload with sociology, sustainability, and manufacturing courses. Outside of the classroom, I filled my time mentoring students in my job as a TA, tinkering in our Makerspaces, and trying new sweets around the Big Apple.", "My interests bring me too many niche topics to count, but some of my current favorites include: sustainability, crafting, baking, Thai food, reading, and running."]
 subdesc: "Here on my website you can find a few of my featured projects. Please have a look around and drop me a line if you'd like to collaborate!"
 coverimages: /images/headshot.jpg
 # coverimages2: /images/epic-smiley.jpg
@@ -56,6 +56,22 @@ tiktok: # https://www.tiktok.com/@spun.cer
 
 # Misc
 nanobar: /js/nanobar.min.js
+
+# bootstrap: /css/bootstrap.css
+
+# widgets:
+# - about
+# about:
+#   title: About John Doe
+#   content:
+#   - image: /images/headshot.jpg
+#     image_alt: John
+#     description: I'm a python developer
+#   - image: /images/headshot.jpg
+#     image_alt: Rust
+#     description: Recently I started learning rust.
+
+
 glide: 
   js: ../../../node_modules/@glidejs/glide
   core_css: /css/glide.core.min.css
