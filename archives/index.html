@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- <link rel="stylesheet" href="/css/glide.core.min.css"> -->
-<!-- <link rel="stylesheet" href="/css/glide.theme.min.css"> -->
 
 <head>
 
@@ -168,18 +166,6 @@
       <div class="nine columns left">
         <a href="/">Home</a>
         
-          
-          <a href="/works" class="ml">Works</a>
-          
-        
-          
-          <a href="/about" class="ml">About</a>
-          
-        
-          
-          <a href="/odds" class="ml">Odds and Ends</a>
-          
-        
         <!-- 
           
             <a href="mailto:spencer@spencergb.me" target="_blank" class="ml">Email</a>
@@ -200,12 +186,12 @@
       <div class="row">
 
         <div class="three columns left lit">
-          <p class="bottom">Jun 20, 2021</p>
+          <p class="bottom">Jul 13, 2021</p>
         </div>
         <div class="nine columns left mb-3">
-          <a href="/2021/06/20/404/" class="">
+          <a href="/Three/" class="">
             
-              404 Page Not Found
+              Three
             
           </a>
         </div>
@@ -216,12 +202,12 @@
       <div class="row">
 
         <div class="three columns left lit">
-          <p class="bottom">Jan 21, 2021</p>
+          <p class="bottom">Jul 13, 2021</p>
         </div>
         <div class="nine columns left mb-3">
-          <a href="/2021/01/21/draft-fireworks/" class="">
+          <a href="/Four/" class="">
             
-              (Draft) Fireworks: A mesmerizing song about a high school love story
+              Four
             
           </a>
         </div>
@@ -232,12 +218,12 @@
       <div class="row">
 
         <div class="three columns left lit">
-          <p class="bottom">Jan 4, 2021</p>
+          <p class="bottom">Jul 13, 2021</p>
         </div>
         <div class="nine columns left mb-3">
-          <a href="/2021/01/04/draft-some-life-advice/" class="">
+          <a href="/Five/" class="">
             
-              (Draft) Some life advice
+              Five
             
           </a>
         </div>
@@ -248,12 +234,12 @@
       <div class="row">
 
         <div class="three columns left lit">
-          <p class="bottom">Dec 30, 2020</p>
+          <p class="bottom">Jun 23, 2021</p>
         </div>
         <div class="nine columns left mb-3">
-          <a href="/2020/12/30/draft-it-is-okay-to-not-be-okay/" class="">
+          <a href="/Testing2/" class="">
             
-              (Draft) It's okay to not be okay
+              Testing2
             
           </a>
         </div>
@@ -264,28 +250,12 @@
       <div class="row">
 
         <div class="three columns left lit">
-          <p class="bottom">Dec 27, 2020</p>
+          <p class="bottom">Jun 23, 2021</p>
         </div>
         <div class="nine columns left mb-3">
-          <a href="/2020/12/27/draft-i-should-not-compare-my-chapter-1/" class="">
+          <a href="/Testing/" class="">
             
-              (Draft) I shouldn't compare my chapter 1 to someone else's chapter 10
-            
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article>
-      <div class="row">
-
-        <div class="three columns left lit">
-          <p class="bottom">Dec 23, 2020</p>
-        </div>
-        <div class="nine columns left mb-3">
-          <a href="/2020/12/23/draft-i-am-a-bad-planner-but-i-will-keep-making-plans/" class="">
-            
-              (Draft) I'm a bad planner but I'll keep making plans
+              Testing
             
           </a>
         </div>
@@ -295,16 +265,6 @@
 <div class="pagination-bar">
   <ul class="pagination">
     
-    
-
-    <a class="" href="/archives/page/2/">
-      <span>Older</span>
-      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5A.5.5 0 0 0 4 8z" />
-      </svg>
-    </a>
-
     
   </ul>
 </div>
@@ -369,15 +329,25 @@
 
   </div>
   <script src="/js/nanobar.min.js"></script>
-  <!-- <script src="../../../node_modules/@glidejs/glide"></script> -->
+  <script src="/js/siema.min.js"></script>
   <script>
-    // new Glide('.glide').mount();
-    // new Glide(".glide", {
-      // peek: 50,
-      // perView: 2,
-      // type: "carousel"
-    // }).mount();
-
+    const mySiema = new Siema({
+      selector: ".siema",
+      duration: parseInt("500"),
+      easing: "ease-in-out",
+      perPage: parseInt("1"),
+      startIndex: parseInt("0"),
+      draggable: "true" == 'true',
+      multipleDrag: "true" == 'true',
+      threshold: parseInt("20"),
+      loop: "true" == 'true',
+      rtl: false,
+      onInit: () => {},
+      onChange: () => {},
+    });
+    setInterval(() => mySiema.next(), parseInt("3000"),);
+    document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
+    document.querySelector('.next').addEventListener('click', () => mySiema.next())
     var options = {
       classname: 'nanobar',
       id: 'myNanobar'

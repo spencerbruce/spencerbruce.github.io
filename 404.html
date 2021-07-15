@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- <link rel="stylesheet" href="/css/glide.core.min.css"> -->
-<!-- <link rel="stylesheet" href="/css/glide.theme.min.css"> -->
 
 <head>
 
@@ -168,18 +166,6 @@
       <div class="nine columns left">
         <a href="/">Home</a>
         
-          
-          <a href="/works" class="ml">Works</a>
-          
-        
-          
-          <a href="/about" class="ml">About</a>
-          
-        
-          
-          <a href="/odds" class="ml">Odds and Ends</a>
-          
-        
         <!-- 
           
             <a href="mailto:spencer@spencergb.me" target="_blank" class="ml">Email</a>
@@ -255,15 +241,25 @@
 
   </div>
   <script src="/js/nanobar.min.js"></script>
-  <!-- <script src="../../../node_modules/@glidejs/glide"></script> -->
+  <script src="/js/siema.min.js"></script>
   <script>
-    // new Glide('.glide').mount();
-    // new Glide(".glide", {
-      // peek: 50,
-      // perView: 2,
-      // type: "carousel"
-    // }).mount();
-
+    const mySiema = new Siema({
+      selector: ".siema",
+      duration: parseInt("500"),
+      easing: "ease-in-out",
+      perPage: parseInt("1"),
+      startIndex: parseInt("0"),
+      draggable: "true" == 'true',
+      multipleDrag: "true" == 'true',
+      threshold: parseInt("20"),
+      loop: "true" == 'true',
+      rtl: false,
+      onInit: () => {},
+      onChange: () => {},
+    });
+    setInterval(() => mySiema.next(), parseInt("3000"),);
+    document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
+    document.querySelector('.next').addEventListener('click', () => mySiema.next())
     var options = {
       classname: 'nanobar',
       id: 'myNanobar'
