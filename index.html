@@ -12,7 +12,7 @@
   
   <link rel="canonical" href="https://www.spencergb.me/">
   
-  <meta name="description" content="the landing page for spencer bruce&#39;s portfolio site">
+  <meta name="description" content="spencer bruce&#39;s personal portfolio website">
   
   
   <meta name="author" content="Spencer Bruce">
@@ -23,14 +23,14 @@
   <meta property="og:type" content="article" />
   <meta property="og:title" content="spencer bruce" />
   
-  <meta property="og:description" content="the landing page for spencer bruce&#39;s portfolio site">
+  <meta property="og:description" content="spencer bruce&#39;s personal portfolio website">
   
   <meta property="og:url" content="https://www.spencergb.me/" />
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="spencer bruce">
   
-  <meta name="twitter:description" content="the landing page for spencer bruce&#39;s portfolio site">
+  <meta name="twitter:description" content="spencer bruce&#39;s personal portfolio website">
   
   
   <meta name="twitter:image" content="https://www.spencergb.meundefined">
@@ -40,11 +40,6 @@
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Preload fonts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="preload" href="../fonts/dm-serif-display-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="../fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -139,23 +134,27 @@
       <div onclick=setDarkMode(true) id="darkBtn">🌇</div>
       <div onclick=setDarkMode(false) id="lightBtn" class=hidden>🌃</div>
       <script >
-        if (localStorage.getItem('preferredTheme') == 'dark') {
-          setDarkMode(true)
-        }
         function setDarkMode(isDark) {
-          var darkBtn = document.getElementById('darkBtn')
-          var lightBtn = document.getElementById('lightBtn')
-          if (isDark) {
-            lightBtn.style.display = "block"
-            darkBtn.style.display = "none"
-            localStorage.setItem('preferredTheme', 'dark');
-          } else {
-            lightBtn.style.display = "none"
-            darkBtn.style.display = "block"
-            localStorage.removeItem('preferredTheme');
-          }
-          document.body.classList.toggle("darkmode");
+            var darkBtn = document.getElementById('darkBtn')
+            var lightBtn = document.getElementById('lightBtn')
+            if (isDark) {
+              lightBtn.style.display = "block"
+              darkBtn.style.display = "none"
+              localStorage.setItem('preferredTheme', 'dark');
+            } else {
+              lightBtn.style.display = "none"
+              darkBtn.style.display = "block"
+              localStorage.removeItem('preferredTheme');
+            } 
+            document.getElementsByClassName("email")[0].classList.toggle("email-darkmode"); 
+            document.body.classList.toggle("darkmode");
         }
+        window.addEventListener('load', function() {
+          if (localStorage.getItem('preferredTheme') == 'dark') {
+            setDarkMode(true);
+          }
+          
+        });
       </script>
     </h1>
   </div>
@@ -167,14 +166,6 @@
   </div>
 
   <div class="five columns mt-3 u-pull-right">
-    
-      
-      <a href="/works" class="ml u-pull-right">Works</a>
-      
-    
-      
-      <a href="/about" class="ml u-pull-right">About</a>
-      
     
     <a class="u-pull-right" href="/">Home</a>
     <!-- 
@@ -215,8 +206,14 @@
   </div>  
 
   <div class="seven columns">
-    <h2>thanks for stopping by! here&#39;s a bit about me:</h2>
-    <!-- <h2><u>thanks for stopping by! here&#39;s a bit about me:</u></h2> -->
+    <h2>
+      
+        thanks for stopping by!<br>
+      
+        here&#39;s a bit about me:<br>
+      
+    </h2>
+    <!-- <h2><u>thanks for stopping by!,here&#39;s a bit about me:</u></h2> -->
     
       <p>I am a recent graduate from Columbia University, where I recieved a B.S. in Computer Science on the Vision, Graphics, Interaction, &amp; Robotics track.</p>
     
@@ -248,101 +245,58 @@
 
 <div class="row">
   <div class="six columns mb-3">
-    <a href="/Five/">
-      <img class="u-max-full-width" src="https://www.spencergb.me/images/headshot.jpg" alt="this is the alt for number 5"> 
-      Five
+    
+      <a target="_blank" rel="noopener" href="https://observablehq.com/d/990ee1c78d4e9632">
+    
+      <img class="u-max-full-width" src="https://www.spencergb.me/COVID-19/covid-data.gif" alt="A gif of the interaction with a parallel coordinate diagram. Each column represents one metric of data for each state, and the column can be rearranged by clicking and dragging on the column title. This redistributes the parallel coordinate chart accordingly. Hovering over a line (state) reveals a tooltip with that state's selected demographic and COVID-19 information."> 
+      COVID-19 + State-Level Demographics Dashboard
     </a>
-    <p class="desc">This is a placeholder description for the headshot</p>
+    <p class="desc">A parallel coordinate dashboard to explore potential links between a state's demographics + COVID-19 vaccine data with their case numbers.</p>
   </div>
   <div class="six columns mb-3">
-    <a href="/Testing/" class="bottom"> 
-      <img class="u-max-full-width" src="https://www.spencergb.me/images/headshot.jpg" alt="This is the alt text for the headshot"> 
-      Testing
+    
+      <a target="_blank" rel="noopener" href="https://observablehq.com/d/bb382d50701a2bf4">
+    
+      <img class="u-max-full-width" src="https://www.spencergb.me/TikTok/spotify.gif" alt="A gif of the interaction with a multi-line chart that depicts the number of Spotify streams for each song encoded in one line. The lines are color-coded as dark blue when the song is trending on TikTok, light blue when the song is not trending on TikTok, and orange when the song has never trended on TikTok. There is the ability to scroll left and right through time, hover over a date in the span of time, and zoom in to see more detail."> 
+      TikTok on the Spot
     </a>
-    <p class="desc">This is a placeholder description for the headshot</p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="six columns mb-3">
-    <a href="/Four/">
-      <img class="u-max-full-width" src="https://www.spencergb.me/images/nyan.gif" alt="this is the alt for number 4"> 
-      Four
-    </a>
-    <p class="desc">This is a placeholder description for the nyan cat gif</p>
-  </div>
-  <div class="six columns mb-3">
-    <a href="/Testing2/" class="bottom"> 
-      <img class="u-max-full-width" src="https://www.spencergb.me/images/thumbnail.jpg" alt="This is the second alt text"> 
-      Testing2
-    </a>
-    <p class="desc">This is a placeholder description for the thumbnail</p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="six columns mb-3">
-    <a href="/Three/">
-      <img class="u-max-full-width" src="https://www.spencergb.me/images/earth.gif" alt="this is the alt for number 3"> 
-      Three
-    </a>
-    <p class="desc">This is a placeholder description for the earth gif</p>
-  </div>
-  <div class="six columns mb-3">
-    <a href="/PPS/" class="bottom"> 
-      <img class="u-max-full-width" src="" alt=""> 
-      PPS
-    </a>
-    <p class="desc"></p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="six columns mb-3">
-    <a href="/Robotics/">
-      <img class="u-max-full-width" src="" alt=""> 
-      Robotics
-    </a>
-    <p class="desc"></p>
-  </div>
-  <div class="six columns mb-3">
-    <a href="/UIDesign/" class="bottom"> 
-      <img class="u-max-full-width" src="" alt=""> 
-      UIDesign
-    </a>
-    <p class="desc"></p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="six columns mb-3">
-    <a href="/DataViz/">
-      <img class="u-max-full-width" src="" alt=""> 
-      DataViz
-    </a>
-    <p class="desc"></p>
-  </div>
-  <div class="six columns mb-3">
-    <a href="/Demo/" class="bottom"> 
-      <img class="u-max-full-width" src="https://www.spencergb.me/images/nyan.gif" alt="A demo of posting to hexo"> 
-      Demo
-    </a>
-    <p class="desc">This is the demo byline</p>
+    <p class="desc">An interactive visualization depicting the link between Spotify streams and TikTok audio popularity.</p>
   </div>
 </div>
 
 
 
 
-
-<div class="row">
+<!-- <div class="row">
   <div class="twelve columns">
     <div id="mapid" style="height: 500px;"></div>
   </div>
-</div>
+</div> -->
 
 <!-- <h4> <a href="/archives">All Posts</a></h4> -->
-
+<script src="/js/siema.min.js"></script>
+<script>
+  const desc = [{"image":"/images/headshot.jpg","image_alt":"A photo of Spencer in front of Columbia University's Low Library. He is smiling, wearing a white collared shirt underneath a black sweater. On top of this he wears an unzipped light blue graduation gown. In the background you can see trees and the top of Riverside Church.","description":"I'm a python developer"},{"image":"/images/1.jpg","image_alt":"Blueberry favicon","description":"Placeholder 1"},{"image":"/images/2.jpg","image_alt":"Blueberry favicon","description":"Placeholder 2"},{"image":"/images/3.jpg","image_alt":"Blueberry favicon","description":"Placeholder 3"},{"image":"/images/4.jpg","image_alt":"Blueberry favicon","description":"Placeholder 4"},{"image":"/images/5.jpg","image_alt":"Blueberry favicon","description":"Placeholder 5"},{"image":"/images/6.jpg","image_alt":"Blueberry favicon","description":"Placeholder 6"},{"image":"/images/7.jpg","image_alt":"Blueberry favicon","description":"this is the new image"}];
+    const mySiema = new Siema({
+      selector: ".siema",
+      duration: parseInt("1000"),
+      easing: "ease-in-out",
+      perPage: parseInt("1"),
+      startIndex: parseInt("0"),
+      draggable: "true" == 'true',
+      multipleDrag: "true" == 'true',
+      threshold: parseInt("20"),
+      loop: "true" == 'true',
+      rtl: false,
+      onInit: () => {},
+      onChange: () => {
+        document.getElementById("carousel-desc").innerHTML = desc[mySiema.currentSlide]["description"];
+      },
+    });
+    setInterval(() => mySiema.next(), parseInt("4000"),);
+    // document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
+    // document.querySelector('.next').addEventListener('click', () => mySiema.next())
+</script>
           <div class="row mt-2">
   
     <div class="four columns mb-2">
@@ -406,65 +360,7 @@
     </div>
   </div>
   <script src="/js/nanobar.min.js"></script>
-  <script src="/js/siema.min.js"></script>
   <script>
-    var map = L.map('mapid').setView([38, -97], 4);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; <a target="_blank" rel="noopener" href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-    }).addTo(map);
-    var imageUrl = 'images/Amtrak.svg';
-    var imageBounds = [[25.3013, -122.2892],
-                       [45.201849, -74.0060]];
-    L.imageOverlay(imageUrl, imageBounds).addTo(map);
-    L.control.scale().addTo(map);
-    // show a marker on the map
-    L.marker([43.0481,-76.1474]).bindPopup('Syracuse, NY').addTo(map);
-    L.marker([41.8781,-87.62984]).bindPopup('Chicago, IL').addTo(map);
-    L.marker([39.7392,-104.9903]).bindPopup('Denver, CO').addTo(map);
-    L.marker([37.8395,-122.2892]).bindPopup('Emeryville, CA').addTo(map);
-    L.marker([34.0522,-118.2437]).bindPopup('Los Angeles, CA').addTo(map);
-    L.marker([32.2226,-110.974]).bindPopup('Tucson, AZ').addTo(map);
-    L.marker([29.4241,-98.4936]).bindPopup('San Antonio, TX').addTo(map);
-    L.marker([29.9511,-90.0715]).bindPopup('New Orleans, LA').addTo(map);
-    L.marker([33.7490,-84.3880]).bindPopup('Atlanta, GA').addTo(map);
-    L.marker([38.9072,-77.0369]).bindPopup('Washington, DC').addTo(map);
-    L.marker([40.7128,-74.0060]).bindPopup('New York, NY').addTo(map);
-
-    var coords = [[43.0481,-76.1474],
-                  [41.8781,-87.62984],
-                  [39.7392,-104.9903],
-                  [37.8395,-122.2892],
-                  [34.0522,-118.2437],
-                  [32.2226,-110.974],
-                  [29.4241,-98.4936],
-                  [29.9511,-90.0715],
-                  [33.7490,-84.3880],
-                  [38.9072,-77.0369],
-                  [40.7128,-74.0060]];
-
-    // var polyline = L.polyline(coords).addTo(map);
-
-    const desc = [{"image":"/images/headshot.jpg","image_alt":"A photo of Spencer in front of Columbia University's Low Library. He is smiling, wearing a white collared shirt underneath a black sweater. On top of this he wears an unzipped light blue graduation gown. In the background you can see trees and the top of Riverside Church.","description":"I'm a python developer"},{"image":"/images/1.jpg","image_alt":"Blueberry favicon","description":"Placeholder 1"},{"image":"/images/2.jpg","image_alt":"Blueberry favicon","description":"Placeholder 2"},{"image":"/images/3.jpg","image_alt":"Blueberry favicon","description":"Placeholder 3"},{"image":"/images/4.jpg","image_alt":"Blueberry favicon","description":"Placeholder 4"},{"image":"/images/5.jpg","image_alt":"Blueberry favicon","description":"Placeholder 5"},{"image":"/images/6.jpg","image_alt":"Blueberry favicon","description":"Placeholder 6"},{"image":"/images/7.jpg","image_alt":"Blueberry favicon","description":"this is the new image"}];
-    const mySiema = new Siema({
-      selector: ".siema",
-      duration: parseInt("800"),
-      easing: "ease-out",
-      perPage: parseInt("1"),
-      startIndex: parseInt("0"),
-      draggable: "true" == 'true',
-      multipleDrag: "true" == 'true',
-      threshold: parseInt("20"),
-      loop: "true" == 'true',
-      rtl: false,
-      onInit: () => {},
-      onChange: () => {
-        document.getElementById("carousel-desc").innerHTML = desc[mySiema.currentSlide]["description"];
-      },
-    });
-    setInterval(() => mySiema.next(), parseInt("3500"),);
-    // document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
-    // document.querySelector('.next').addEventListener('click', () => mySiema.next())
     var options = {
       classname: 'nanobar',
       id: 'myNanobar'
@@ -473,6 +369,43 @@
     nanobar.go(30);
     nanobar.go(76);
     nanobar.go(100);
+  
+    // var map = L.map('mapid').setView([38, -97], 4);
+    // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //   maxZoom: 19,
+    //   attribution: '&copy; <a target="_blank" rel="noopener" href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+    // }).addTo(map);
+    // var imageUrl = 'images/Amtrak.svg';
+    // var imageBounds = [[25.3013, -122.2892],
+    //                    [45.201849, -74.0060]];
+    // L.imageOverlay(imageUrl, imageBounds).addTo(map);
+    // L.control.scale().addTo(map);
+    // // show a marker on the map
+    // L.marker([43.0481,-76.1474]).bindPopup('Syracuse, NY').addTo(map);
+    // L.marker([41.8781,-87.62984]).bindPopup('Chicago, IL').addTo(map);
+    // L.marker([39.7392,-104.9903]).bindPopup('Denver, CO').addTo(map);
+    // L.marker([37.8395,-122.2892]).bindPopup('Emeryville, CA').addTo(map);
+    // L.marker([34.0522,-118.2437]).bindPopup('Los Angeles, CA').addTo(map);
+    // L.marker([32.2226,-110.974]).bindPopup('Tucson, AZ').addTo(map);
+    // L.marker([29.4241,-98.4936]).bindPopup('San Antonio, TX').addTo(map);
+    // L.marker([29.9511,-90.0715]).bindPopup('New Orleans, LA').addTo(map);
+    // L.marker([33.7490,-84.3880]).bindPopup('Atlanta, GA').addTo(map);
+    // L.marker([38.9072,-77.0369]).bindPopup('Washington, DC').addTo(map);
+    // L.marker([40.7128,-74.0060]).bindPopup('New York, NY').addTo(map);
+
+    // var coords = [[43.0481,-76.1474],
+    //               [41.8781,-87.62984],
+    //               [39.7392,-104.9903],
+    //               [37.8395,-122.2892],
+    //               [34.0522,-118.2437],
+    //               [32.2226,-110.974],
+    //               [29.4241,-98.4936],
+    //               [29.9511,-90.0715],
+    //               [33.7490,-84.3880],
+    //               [38.9072,-77.0369],
+    //               [40.7128,-74.0060]];
+    
+    // var polyline = L.polyline(coords).addTo(map);
   </script>
 
 </body>

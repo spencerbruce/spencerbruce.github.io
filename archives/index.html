@@ -12,7 +12,7 @@
   
   <link rel="canonical" href="https://www.spencergb.me/archives/">
   
-  <meta name="description" content="the landing page for spencer bruce&#39;s portfolio site">
+  <meta name="description" content="spencer bruce&#39;s personal portfolio website">
   
   
   <meta name="author" content="Spencer Bruce">
@@ -23,14 +23,14 @@
   <meta property="og:type" content="article" />
   <meta property="og:title" content="All Posts - Spencer Bruce" />
   
-  <meta property="og:description" content="the landing page for spencer bruce&#39;s portfolio site">
+  <meta property="og:description" content="spencer bruce&#39;s personal portfolio website">
   
   <meta property="og:url" content="https://www.spencergb.me/archives/" />
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="All Posts - Spencer Bruce">
   
-  <meta name="twitter:description" content="the landing page for spencer bruce&#39;s portfolio site">
+  <meta name="twitter:description" content="spencer bruce&#39;s personal portfolio website">
   
   
   <meta name="twitter:image" content="https://www.spencergb.meundefined">
@@ -40,11 +40,6 @@
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Preload fonts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="preload" href="../fonts/dm-serif-display-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="../fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -139,23 +134,27 @@
       <div onclick=setDarkMode(true) id="darkBtn">🌇</div>
       <div onclick=setDarkMode(false) id="lightBtn" class=hidden>🌃</div>
       <script >
-        if (localStorage.getItem('preferredTheme') == 'dark') {
-          setDarkMode(true)
-        }
         function setDarkMode(isDark) {
-          var darkBtn = document.getElementById('darkBtn')
-          var lightBtn = document.getElementById('lightBtn')
-          if (isDark) {
-            lightBtn.style.display = "block"
-            darkBtn.style.display = "none"
-            localStorage.setItem('preferredTheme', 'dark');
-          } else {
-            lightBtn.style.display = "none"
-            darkBtn.style.display = "block"
-            localStorage.removeItem('preferredTheme');
-          }
-          document.body.classList.toggle("darkmode");
+            var darkBtn = document.getElementById('darkBtn')
+            var lightBtn = document.getElementById('lightBtn')
+            if (isDark) {
+              lightBtn.style.display = "block"
+              darkBtn.style.display = "none"
+              localStorage.setItem('preferredTheme', 'dark');
+            } else {
+              lightBtn.style.display = "none"
+              darkBtn.style.display = "block"
+              localStorage.removeItem('preferredTheme');
+            } 
+            document.getElementsByClassName("email")[0].classList.toggle("email-darkmode"); 
+            document.body.classList.toggle("darkmode");
         }
+        window.addEventListener('load', function() {
+          if (localStorage.getItem('preferredTheme') == 'dark') {
+            setDarkMode(true);
+          }
+          
+        });
       </script>
     </h1>
   </div>
@@ -167,14 +166,6 @@
   </div>
 
   <div class="five columns mt-3 u-pull-right">
-    
-      
-      <a href="/works" class="ml u-pull-right">Works</a>
-      
-    
-      
-      <a href="/about" class="ml u-pull-right">About</a>
-      
     
     <a class="u-pull-right" href="/">Home</a>
     <!-- 
@@ -196,12 +187,12 @@
       <div class="row">
 
         <div class="three columns left lit">
-          <p class="bottom">Jul 18, 2021</p>
+          <p class="bottom">Jul 16, 2021</p>
         </div>
         <div class="nine columns left mb-3">
-          <a href="/Demo/" class="">
+          <a href="/COVID-19/" class="">
             
-              Demo
+              COVID-19 + State-Level Demographics Dashboard
             
           </a>
         </div>
@@ -215,73 +206,9 @@
           <p class="bottom">Jul 16, 2021</p>
         </div>
         <div class="nine columns left mb-3">
-          <a href="/PPS/" class="">
+          <a href="/TikTok/" class="">
             
-              PPS
-            
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article>
-      <div class="row">
-
-        <div class="three columns left lit">
-          <p class="bottom">Jul 16, 2021</p>
-        </div>
-        <div class="nine columns left mb-3">
-          <a href="/Robotics/" class="">
-            
-              Robotics
-            
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article>
-      <div class="row">
-
-        <div class="three columns left lit">
-          <p class="bottom">Jul 16, 2021</p>
-        </div>
-        <div class="nine columns left mb-3">
-          <a href="/UIDesign/" class="">
-            
-              UIDesign
-            
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article>
-      <div class="row">
-
-        <div class="three columns left lit">
-          <p class="bottom">Jul 16, 2021</p>
-        </div>
-        <div class="nine columns left mb-3">
-          <a href="/DataViz/" class="">
-            
-              DataViz
-            
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article>
-      <div class="row">
-
-        <div class="three columns left lit">
-          <p class="bottom">Jun 23, 2021</p>
-        </div>
-        <div class="nine columns left mb-3">
-          <a href="/Testing/" class="">
-            
-              Testing
+              TikTok on the Spot
             
           </a>
         </div>
@@ -291,16 +218,6 @@
 <div class="pagination-bar">
   <ul class="pagination">
     
-    
-
-    <a class="" href="/archives/page/2/">
-      <span>Older</span>
-      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5A.5.5 0 0 0 4 8z" />
-      </svg>
-    </a>
-
     
   </ul>
 </div>
@@ -369,65 +286,7 @@
     </div>
   </div>
   <script src="/js/nanobar.min.js"></script>
-  <script src="/js/siema.min.js"></script>
   <script>
-    var map = L.map('mapid').setView([38, -97], 4);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; <a target="_blank" rel="noopener" href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-    }).addTo(map);
-    var imageUrl = 'images/Amtrak.svg';
-    var imageBounds = [[25.3013, -122.2892],
-                       [45.201849, -74.0060]];
-    L.imageOverlay(imageUrl, imageBounds).addTo(map);
-    L.control.scale().addTo(map);
-    // show a marker on the map
-    L.marker([43.0481,-76.1474]).bindPopup('Syracuse, NY').addTo(map);
-    L.marker([41.8781,-87.62984]).bindPopup('Chicago, IL').addTo(map);
-    L.marker([39.7392,-104.9903]).bindPopup('Denver, CO').addTo(map);
-    L.marker([37.8395,-122.2892]).bindPopup('Emeryville, CA').addTo(map);
-    L.marker([34.0522,-118.2437]).bindPopup('Los Angeles, CA').addTo(map);
-    L.marker([32.2226,-110.974]).bindPopup('Tucson, AZ').addTo(map);
-    L.marker([29.4241,-98.4936]).bindPopup('San Antonio, TX').addTo(map);
-    L.marker([29.9511,-90.0715]).bindPopup('New Orleans, LA').addTo(map);
-    L.marker([33.7490,-84.3880]).bindPopup('Atlanta, GA').addTo(map);
-    L.marker([38.9072,-77.0369]).bindPopup('Washington, DC').addTo(map);
-    L.marker([40.7128,-74.0060]).bindPopup('New York, NY').addTo(map);
-
-    var coords = [[43.0481,-76.1474],
-                  [41.8781,-87.62984],
-                  [39.7392,-104.9903],
-                  [37.8395,-122.2892],
-                  [34.0522,-118.2437],
-                  [32.2226,-110.974],
-                  [29.4241,-98.4936],
-                  [29.9511,-90.0715],
-                  [33.7490,-84.3880],
-                  [38.9072,-77.0369],
-                  [40.7128,-74.0060]];
-
-    // var polyline = L.polyline(coords).addTo(map);
-
-    const desc = [{"image":"/images/headshot.jpg","image_alt":"A photo of Spencer in front of Columbia University's Low Library. He is smiling, wearing a white collared shirt underneath a black sweater. On top of this he wears an unzipped light blue graduation gown. In the background you can see trees and the top of Riverside Church.","description":"I'm a python developer"},{"image":"/images/1.jpg","image_alt":"Blueberry favicon","description":"Placeholder 1"},{"image":"/images/2.jpg","image_alt":"Blueberry favicon","description":"Placeholder 2"},{"image":"/images/3.jpg","image_alt":"Blueberry favicon","description":"Placeholder 3"},{"image":"/images/4.jpg","image_alt":"Blueberry favicon","description":"Placeholder 4"},{"image":"/images/5.jpg","image_alt":"Blueberry favicon","description":"Placeholder 5"},{"image":"/images/6.jpg","image_alt":"Blueberry favicon","description":"Placeholder 6"},{"image":"/images/7.jpg","image_alt":"Blueberry favicon","description":"this is the new image"}];
-    const mySiema = new Siema({
-      selector: ".siema",
-      duration: parseInt("800"),
-      easing: "ease-out",
-      perPage: parseInt("1"),
-      startIndex: parseInt("0"),
-      draggable: "true" == 'true',
-      multipleDrag: "true" == 'true',
-      threshold: parseInt("20"),
-      loop: "true" == 'true',
-      rtl: false,
-      onInit: () => {},
-      onChange: () => {
-        document.getElementById("carousel-desc").innerHTML = desc[mySiema.currentSlide]["description"];
-      },
-    });
-    setInterval(() => mySiema.next(), parseInt("3500"),);
-    // document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
-    // document.querySelector('.next').addEventListener('click', () => mySiema.next())
     var options = {
       classname: 'nanobar',
       id: 'myNanobar'
@@ -436,6 +295,43 @@
     nanobar.go(30);
     nanobar.go(76);
     nanobar.go(100);
+  
+    // var map = L.map('mapid').setView([38, -97], 4);
+    // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //   maxZoom: 19,
+    //   attribution: '&copy; <a target="_blank" rel="noopener" href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+    // }).addTo(map);
+    // var imageUrl = 'images/Amtrak.svg';
+    // var imageBounds = [[25.3013, -122.2892],
+    //                    [45.201849, -74.0060]];
+    // L.imageOverlay(imageUrl, imageBounds).addTo(map);
+    // L.control.scale().addTo(map);
+    // // show a marker on the map
+    // L.marker([43.0481,-76.1474]).bindPopup('Syracuse, NY').addTo(map);
+    // L.marker([41.8781,-87.62984]).bindPopup('Chicago, IL').addTo(map);
+    // L.marker([39.7392,-104.9903]).bindPopup('Denver, CO').addTo(map);
+    // L.marker([37.8395,-122.2892]).bindPopup('Emeryville, CA').addTo(map);
+    // L.marker([34.0522,-118.2437]).bindPopup('Los Angeles, CA').addTo(map);
+    // L.marker([32.2226,-110.974]).bindPopup('Tucson, AZ').addTo(map);
+    // L.marker([29.4241,-98.4936]).bindPopup('San Antonio, TX').addTo(map);
+    // L.marker([29.9511,-90.0715]).bindPopup('New Orleans, LA').addTo(map);
+    // L.marker([33.7490,-84.3880]).bindPopup('Atlanta, GA').addTo(map);
+    // L.marker([38.9072,-77.0369]).bindPopup('Washington, DC').addTo(map);
+    // L.marker([40.7128,-74.0060]).bindPopup('New York, NY').addTo(map);
+
+    // var coords = [[43.0481,-76.1474],
+    //               [41.8781,-87.62984],
+    //               [39.7392,-104.9903],
+    //               [37.8395,-122.2892],
+    //               [34.0522,-118.2437],
+    //               [32.2226,-110.974],
+    //               [29.4241,-98.4936],
+    //               [29.9511,-90.0715],
+    //               [33.7490,-84.3880],
+    //               [38.9072,-77.0369],
+    //               [40.7128,-74.0060]];
+    
+    // var polyline = L.polyline(coords).addTo(map);
   </script>
 
 </body>
