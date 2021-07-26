@@ -1,38 +1,74 @@
 #title in header
-title: "hiya, my name's spencer"
+title: "hi, i'm spencer"
 
 #main info
 #owner
-owner: # "Spencer Bruce"
 email: spencer@spencergb.me
-info: "thanks for stopping by! here's a bit about me:"
-#description
-desc: ["I am a recent graduate from Columbia University, where I recieved a B.S. in Computer Science on the Vision, Graphics, Interaction, & Robotics track.","While a student, I had loads of fun exploring the creative process and diversified my courseload with sociology, sustainability, and manufacturing courses. Outside of the classroom, I filled my time mentoring students in my job as a TA, tinkering in our Makerspaces, and trying new sweets around the Big Apple.", "My interests bring me too many niche topics to count, but some of my current favorites include: sustainability, crafting, baking, Thai food, reading, and running."]
+header: 
+  - "thanks for stopping by!"
+  - "here's a bit about me:"
+desc: 
+  - "I am a recent graduate from Columbia University, where I recieved a B.S. in Computer Science on the Vision, Graphics, Interaction, & Robotics track."
+  - "While a student, I had loads of fun exploring the creative process and diversified my courseload with sociology, sustainability, and manufacturing courses. Outside of the classroom, I filled my time mentoring students in my job as a TA, tinkering in our Makerspaces, and trying new sweets around the Big Apple."
+  - "My interests bring me too many niche topics to count, but some of my current favorites include: sustainability, crafting, baking, Thai food, reading, and running."
 subdesc: "Here on my website you can find a few of my featured projects. Please have a look around and drop me a line if you'd like to collaborate!"
-coverimages: /images/headshot.jpg
-# coverimages2: /images/epic-smiley.jpg
-# coverimages: [/images/headshot.jpg,/images/headshot.jpg]
-coveralts: "A photo of Spencer in front of Columbia University's Low Library. He is smiling, wearing a white collared shirt underneath a black sweater. On top of this he wears an unzipped light blue graduation gown. In the background you can see trees and the top of Riverside Church."
 
-# Carousel of images
-# cover : 
-#   showPrevNext : true # Whether to display the left and right toggle buttons.
-#   showIndicators : true # Whether to display the indicators. 
-#   autoLoop : true # Whether it is automatically rotated. 
-#   duration : 120  # Switching delay time. 
-#   intervalTime : 5000  # Automatically switch the interval of the next one. 
-#   useConfig : false # Whether to use the configuration file, configure recommended articles under _data/covers.json, false use the configuration of the theme in the article cover coverImg 
-#   # useConfig How to use: Move the theme hexo-theme-matery/source/_data/covers.json to my-blog/source/_data/ and modify the configuration 
+# siema carousel of images, options:
+# ref: https://pawelgrzybek.github.io/siema/ (codepens are helpful too https://codepen.io/collection/Adpkkd/)
+coverimages:
+  - image: /images/headshot.jpg
+    image_alt: "A photo of Spencer in front of Columbia University's Low Library. He is smiling, wearing a white collared shirt underneath a black sweater. On top of this he wears an unzipped light blue graduation gown. In the background you can see trees and the top of Riverside Church."
+    description: I'm a python developer
+  - image: /images/1.jpg
+    image_alt: "Blueberry favicon"
+    description: "Placeholder 1"
+  - image: /images/2.jpg
+    image_alt: "Blueberry favicon"
+    description: "Placeholder 2"
+  - image: /images/3.jpg
+    image_alt: "Blueberry favicon"
+    description: "Placeholder 3"
+  - image: /images/4.jpg
+    image_alt: "Blueberry favicon"
+    description: "Placeholder 4"
+  - image: /images/5.jpg
+    image_alt: "Blueberry favicon"
+    description: "Placeholder 5"
+  - image: /images/6.jpg
+    image_alt: "Blueberry favicon"
+    description: "Placeholder 6"
+  - image: /images/7.jpg
+    image_alt: "Blueberry favicon"
+    description: "this is the new image"
 
+carousel:
+  selector: '.siema'
+  duration: 1000 # Slide transition duration in milliseconds
+  easing: 'ease-in-out'
+  perPage: 1 # The number of slides to be shown
+  startIndex: 0
+  draggable: true
+  multipleDrag: true
+  threshold: 20
+  loop: true
+  timer: 4000 # amount of time between autoscrolling images in ms, 0 = none
+
+# for supplying a thumnail photo for each post
+post_asset_folder: true 
+
+# links to put on the links page
+links: 
+  - link: https://www.youtube.com/watch?v=_W44NZvHc9I
+    text: Wow 1 
+    color: 44444
+  - link: https://www.youtube.com/watch?v=_W44NZvHc9I
+    text: Wow 2 
+    color: 6ab1c4
 
 #menu
-menu:
-  Works: /works
-  About: /about
-  Odds and Ends: /odds
-
-#index/main page max show posts (in number)
-max_post: 4
+# menu:
+#   Works: /works
+#   About: /about
 
 # Colors use hex color without #
 # Theme color
@@ -41,7 +77,7 @@ tcolor: 6ab1c4
 # Define path to user css
 #(could be also located outside of theme)
 # Relative to source/ directory
-usercss: css/user.css
+usercss: css/custom.css
 
 # social profile at the footer/bottom
 footer: true
@@ -56,26 +92,7 @@ tiktok: # https://www.tiktok.com/@spun.cer
 
 # Misc
 nanobar: /js/nanobar.min.js
-
-# bootstrap: /css/bootstrap.css
-
-# widgets:
-# - about
-# about:
-#   title: About John Doe
-#   content:
-#   - image: /images/headshot.jpg
-#     image_alt: John
-#     description: I'm a python developer
-#   - image: /images/headshot.jpg
-#     image_alt: Rust
-#     description: Recently I started learning rust.
-
-
-glide: 
-  js: ../../../node_modules/@glidejs/glide
-  core_css: /css/glide.core.min.css
-  theme_css: /css/glide.theme.min.css
+siema: /js/siema.min.js
 
 switch_light: 🌃
 switch_dark: 🌇

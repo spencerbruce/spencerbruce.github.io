@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- <link rel="stylesheet" href="<%- theme.glide.core_css %>"> -->
-<!-- <link rel="stylesheet" href="<%- theme.glide.theme_css %>"> -->
 
 <head>
 
@@ -78,11 +76,6 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Preload fonts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="preload" href="../fonts/dm-serif-display-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="../fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <%- css('css/normalize.css') %>
@@ -94,6 +87,11 @@
   <% if (theme.usercss) { %>
   <%- css(theme.usercss) %>
   <% } %>
+
+  <!-- Leaflet
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -110,30 +108,20 @@
 </head>
 
 <body>
+  <!-- <div class="background"/> -->
   <div class="container">
     <div class="row">
       <div>
-
         <%- partial('partial/header') %>
         <div class="trans">
           <%- body %>
           <%- partial('partial/footer') %>
         </div>
       </div>
-
     </div>
-
   </div>
   <script src="<%- theme.nanobar %>"></script>
-  <!-- <script src="<%- theme.glide.js %>"></script> -->
   <script>
-    // new Glide('.glide').mount();
-    // new Glide(".glide", {
-      // peek: 50,
-      // perView: 2,
-      // type: "carousel"
-    // }).mount();
-
     var options = {
       classname: 'nanobar',
       id: 'myNanobar'
@@ -142,6 +130,43 @@
     nanobar.go(30);
     nanobar.go(76);
     nanobar.go(100);
+  
+    // var map = L.map('mapid').setView([38, -97], 4);
+    // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //   maxZoom: 19,
+    //   attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+    // }).addTo(map);
+    // var imageUrl = 'images/Amtrak.svg';
+    // var imageBounds = [[25.3013, -122.2892],
+    //                    [45.201849, -74.0060]];
+    // L.imageOverlay(imageUrl, imageBounds).addTo(map);
+    // L.control.scale().addTo(map);
+    // // show a marker on the map
+    // L.marker([43.0481,-76.1474]).bindPopup('Syracuse, NY').addTo(map);
+    // L.marker([41.8781,-87.62984]).bindPopup('Chicago, IL').addTo(map);
+    // L.marker([39.7392,-104.9903]).bindPopup('Denver, CO').addTo(map);
+    // L.marker([37.8395,-122.2892]).bindPopup('Emeryville, CA').addTo(map);
+    // L.marker([34.0522,-118.2437]).bindPopup('Los Angeles, CA').addTo(map);
+    // L.marker([32.2226,-110.974]).bindPopup('Tucson, AZ').addTo(map);
+    // L.marker([29.4241,-98.4936]).bindPopup('San Antonio, TX').addTo(map);
+    // L.marker([29.9511,-90.0715]).bindPopup('New Orleans, LA').addTo(map);
+    // L.marker([33.7490,-84.3880]).bindPopup('Atlanta, GA').addTo(map);
+    // L.marker([38.9072,-77.0369]).bindPopup('Washington, DC').addTo(map);
+    // L.marker([40.7128,-74.0060]).bindPopup('New York, NY').addTo(map);
+
+    // var coords = [[43.0481,-76.1474],
+    //               [41.8781,-87.62984],
+    //               [39.7392,-104.9903],
+    //               [37.8395,-122.2892],
+    //               [34.0522,-118.2437],
+    //               [32.2226,-110.974],
+    //               [29.4241,-98.4936],
+    //               [29.9511,-90.0715],
+    //               [33.7490,-84.3880],
+    //               [38.9072,-77.0369],
+    //               [40.7128,-74.0060]];
+    
+    // var polyline = L.polyline(coords).addTo(map);
   </script>
 
 </body>

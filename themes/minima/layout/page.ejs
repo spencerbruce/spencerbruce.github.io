@@ -1,3 +1,12 @@
-  <h2><%- page.title %></h2>
-
-  <%- page.content%>
+<h2><%- page.title %></h2>
+<!-- TODO: implement different color on links -->
+<% if (page.links) { %>
+  <div class="row mt-2">
+    <% theme.links.forEach(function(d){ %>
+      <div class="six columns center offset-by-three mb-2">
+        <a class="button" style="width: 100%;" href="<%= d.link %>"><%= d.text %></a>
+      </div>
+    <% }) %>
+  </div>
+<% } %>
+<%- page.content%>
