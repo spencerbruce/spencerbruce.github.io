@@ -1,5 +1,24 @@
-<div class="row mb-1">
-  <div class="one column" style="max-width: 50px">
+<div class="row mt-3 u-pull-right">
+  <div class="twelve columns u-pull-right">
+    <% for (name in theme.menu) { %>
+      <% if (theme.menu[name]) { %>
+      <a href="<%- url_for(theme.menu[name]) %>" class="ml u-pull-right"><%- name %></a>
+      <% } %>
+    <% } %>
+    <a class="u-pull-right" href="<%= config.root %>">Home</a>
+    <a class="mr u-pull-right" href="https://ko-fi.com/spencergb">Ko-fi</a>
+    <!-- <% if (theme.email) { %>
+      <% if (typeof obfuscate === "function") { %>
+        <a href="mailto:<%- obfuscate(theme.email) %>" target="_blank" class="ml">Email</a>
+      <% } else { %>
+        <a href="mailto:<%= theme.email %>" target="_blank" class="ml">Email</a>
+      <% } %>
+    <% } %> -->
+  </div>
+</div>
+
+<div class="row mb-1 mt-0">
+  <div class="one column">
     <h1 class="mt-2 mode">
       <div onclick=setDarkMode(true) id="darkBtn"><%= theme.switch_dark %></div>
       <div onclick=setDarkMode(false) id="lightBtn" class=hidden><%= theme.switch_light %></div>
@@ -23,7 +42,6 @@
           if (localStorage.getItem('preferredTheme') == 'dark') {
             setDarkMode(true);
           }
-          
         });
       </script>
     </h1>
@@ -33,22 +51,6 @@
     <h1 class="mt-2">
       <%= theme.title %>
     </h1>
-  </div>
-
-  <div class="five columns mt-3 u-pull-right">
-    <% for (name in theme.menu) { %>
-      <% if (theme.menu[name]) { %>
-      <a href="<%- url_for(theme.menu[name]) %>" class="ml u-pull-right"><%- name %></a>
-      <% } %>
-    <% } %>
-    <a class="u-pull-right" href="<%= config.root %>">Home</a>
-    <!-- <% if (theme.email) { %>
-      <% if (typeof obfuscate === "function") { %>
-        <a href="mailto:<%- obfuscate(theme.email) %>" target="_blank" class="ml">Email</a>
-      <% } else { %>
-        <a href="mailto:<%= theme.email %>" target="_blank" class="ml">Email</a>
-      <% } %>
-    <% } %> -->
   </div>
 </div>
 

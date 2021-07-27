@@ -11,17 +11,19 @@ href:
 better text, color and style in desc for post 
 animate on hover, change underline on image
 favs
+making a more equitable world in tech
 train ride
 DIY link page 
 terrzo background 
 google card thing
 
 Notes for what's to come: 
-- mention being a ballboy reject lol or train ride or something idk, add emojis
+- train ride or something idk, add emojis
 foster parent 
     becoming 1% FTP
+    kofi
 
-- projects to add: (with gifs???)
+
     - TRAIN RIDEEE, map with google sheets thing 
     projects i like: playdate
     travel, seeing china/japan/learning a language 
@@ -30,7 +32,7 @@ precious plastic
     values
     skeleton.css contact form thing 
     list of songs from trip
-    ENFJ, ravenclaw, waterbender 
+    ENFJ, ravenclaw, waterbender, favorite season is fall
     i am an imperfect idiot!!!!
     intentional living, sustainability are IMPORTANT 
     things I want to do 
@@ -39,25 +41,22 @@ precious plastic
 
 - clay collective 
 - after \ hours 
-- music - a capella / XMAS
+- page for photography? insta pics?
+- music - a capella, theatre, chamber 
 - French + guitar! 
-- third wheel / theatre
+books im reading?
 - dancing / gymnastics
 - rock climbing / running?  
 - movies + cinemaaaaa
-- animation / art i free time 
-
+- watercolor and other art 
 - things I like (movies/TV/books/YT/video games)
 
-- add tags??? 
-
 - SCHOOL PROJECTS:
-    Creative embedded systems 
-    Salsa Soca Reggae
-    Spectator 
-    UI Design Final Project 
-    Robotics Studio 
-    Digital Manufacturing Projects 
-    Art Projects 
-    Programming + Problem Solving 
-    
+    pixel mask 
+    polanding
+    Robotics Studio
+    Digital Manufacturing Projects
+    Art Projects/sewing/sociology?videos?
+    Programming + Problem Solving
+    <!-- Salsa Soca Reggae -->
+    <!-- Spectator  -->

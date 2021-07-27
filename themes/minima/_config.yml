@@ -5,16 +5,15 @@ title: "hi, i'm spencer"
 #owner
 email: spencer@spencergb.me
 header: 
-  - "thanks for stopping by!"
+  - "thanks for stopping by ☺️"
   - "here's a bit about me:"
 desc: 
-  - "I am a recent graduate from Columbia University, where I recieved a B.S. in Computer Science on the Vision, Graphics, Interaction, & Robotics track."
-  - "While a student, I had loads of fun exploring the creative process and diversified my courseload with sociology, sustainability, and manufacturing courses. Outside of the classroom, I filled my time mentoring students in my job as a TA, tinkering in our Makerspaces, and trying new sweets around the Big Apple."
-  - "My interests bring me too many niche topics to count, but some of my current favorites include: sustainability, crafting, baking, Thai food, reading, and running."
-subdesc: "Here on my website you can find a few of my featured projects. Please have a look around and drop me a line if you'd like to collaborate!"
+  - "I graduated in April of 2021 from Columbia Engineering, where I received my B.S. in Computer Science on the Vision, Graphics, Interaction, & Robotics track. I also minored in Sociology! 🎓📚"
+  - "While a student, I diversifed my tech-heavy courseload with sociology, sustainable development, and manufacturing design courses. Outside of the classroom, I spent my time helping fellow students in my job as a TA, tinkering in our Makerspaces, and trying new sweets 🍪 around the Big Apple. 🍎"
+  - "I'm currently recovering from U.S. Open ballperson tryout rejection 🥺🎾 by planning a celebratory train ride across the U.S. once it's safe 🚞. Meanwhile, I hope to find work that utilizes + builds upon my skills and interests to help make this 🌎 a safer, more equitible place. Some of my current interests include: sustainability, baking, Thai food, reading, running, and crosswords."
+subdesc: "Here on my website you can find a few of my featured projects. Please have a look around and drop me a line if you'd like to chat!"
 
-# siema carousel of images, options:
-# ref: https://pawelgrzybek.github.io/siema/ (codepens are helpful too https://codepen.io/collection/Adpkkd/)
+# carousel of images
 coverimages:
   - image: /images/headshot.jpg
     image_alt: "A photo of Spencer in front of Columbia University's Low Library. He is smiling, wearing a white collared shirt underneath a black sweater. On top of this he wears an unzipped light blue graduation gown. In the background you can see trees and the top of Riverside Church."
@@ -41,30 +40,50 @@ coverimages:
     image_alt: "Blueberry favicon"
     description: "this is the new image"
 
+# more options: splidejs.com/options/
 carousel:
-  selector: '.siema'
-  duration: 1000 # Slide transition duration in milliseconds
-  easing: 'ease-in-out'
-  perPage: 1 # The number of slides to be shown
-  startIndex: 0
-  draggable: true
-  multipleDrag: true
-  threshold: 20
-  loop: true
-  timer: 4000 # amount of time between autoscrolling images in ms, 0 = none
+  interval: 4000 # Autoplay interval in milliseconds
+  speed: 1500 # Transition speed in milliseconds
+  type: 'fade' # Determine a slider type: slide (regular), loop (carousel), fade transition
+  padding: 0 # gap and padding must be 0 if type is fade
+  gap: 0 # Gap between slides.
+  perPage: 1 # Determine how many slides should be displayed per page.
+  start: 0 # Start index.
+  pagination: false # indicator dots
+  autoplay: true # whether to enable autoplay
+  arrows: false # Whether to append arrows 
+  pauseOnHover: true # Whether to stop autoplay while a slider is hovered
+  pauseOnFocus: true # Whether to stop autoplay while a slider elements are focused
+  resetProgress: false # Whether to reset progress of the autoplay timer when resumed
+  keyboard: 'global' # Whether to control a slider via keyboard, boolean/str def global
 
 # for supplying a thumnail photo for each post
-post_asset_folder: true 
+post_asset_folder: false 
 
 # links to put on the links page
 links: 
-  - link: https://www.youtube.com/watch?v=_W44NZvHc9I
-    text: Wow 1 
-    color: 44444
-  - link: https://www.youtube.com/watch?v=_W44NZvHc9I
-    text: Wow 2 
-    color: 6ab1c4
-
+  - text: Buy me a Ko-fi
+    link: https://ko-fi.com/spencergb
+    color: 
+  - text: TikTok
+    link: https://www.tiktok.com/@spun.cer
+    color: 
+  - text: YouTube
+    link: https://www.youtube.com/user/SpencerBrucee
+    color: 
+  - text: Twitter
+    link: https://twitter.com/spencergbruce
+    color: 
+  - text: LinkedIn
+    link: https://linkedin.com/in/spencergbruce
+    color: 
+  - text: Instagram
+    link: https://instagram.com/spencergbruce
+    color: 
+  - text: Info on 1% for the Planet
+    link: https://www.onepercentfortheplanet.org/
+    color: 
+  
 #menu
 # menu:
 #   Works: /works
@@ -89,10 +108,11 @@ twitter: https://twitter.com/spencergbruce
 instagram: https://instagram.com/spencergbruce
 youtube: # https://www.youtube.com/user/SpencerBrucee
 tiktok: # https://www.tiktok.com/@spun.cer
+# ko-fi: https://ko-fi.com/spencergb
 
 # Misc
 nanobar: /js/nanobar.min.js
-siema: /js/siema.min.js
+splide: /js/splide.min.js
 
 switch_light: 🌃
 switch_dark: 🌇

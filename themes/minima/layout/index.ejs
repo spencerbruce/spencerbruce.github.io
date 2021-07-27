@@ -1,13 +1,17 @@
 <div class="row">
   <div class="five columns">
-    <div class="siema" style="margin: -10px -10px;">
-      <% theme.coverimages.forEach(function(d){ %>
-        <img style="border-radius: 20px; padding: 10px 10px;" class="u-max-full-width" src="<%= d.image %>" alt="<%- d.image_alt %>">
-      <% }) %>
+    <div id="splide" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <% theme.coverimages.forEach(function(d){ %>
+            <li class="splide__slide">
+              <img class="u-max-full-width" src="<%= d.image %>" alt="<%- d.image_alt %>">
+              <p class="desc" id="carousel-desc"><%- d.description %></p>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
     </div>
-    <!-- <button class="prev">prev</button> -->
-    <!-- <button class="next">next</button> -->
-    <p class="desc" id="carousel-desc"><%- theme.coverimages[theme.carousel.startIndex].description %></p>
   </div>  
 
   <div class="seven columns">
@@ -87,26 +91,23 @@
 </div> -->
 
 <!-- <h4> <a href="<%= config.root %>archives">All Posts</a></h4> -->
-<script src="<%- theme.siema %>"></script>
+<script src="<%- theme.splide %>"></script>
 <script>
-  const desc = <%- JSON.stringify(theme.coverimages) %>;
-    const mySiema = new Siema({
-      selector: "<%- theme.carousel.selector %>",
-      duration: parseInt("<%- theme.carousel.duration %>"),
-      easing: "<%- theme.carousel.easing %>",
-      perPage: parseInt("<%- theme.carousel.perPage %>"),
-      startIndex: parseInt("<%- theme.carousel.startIndex %>"),
-      draggable: "<%- theme.carousel.draggable %>" == 'true',
-      multipleDrag: "<%- theme.carousel.multipleDrag %>" == 'true',
-      threshold: parseInt("<%- theme.carousel.threshold %>"),
-      loop: "<%- theme.carousel.loop %>" == 'true',
-      rtl: false,
-      onInit: () => {},
-      onChange: () => {
-        document.getElementById("carousel-desc").innerHTML = desc[mySiema.currentSlide]["description"];
-      },
-    });
-    setInterval(() => mySiema.next(), parseInt("<%- theme.carousel.timer %>"),);
-    // document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
-    // document.querySelector('.next').addEventListener('click', () => mySiema.next())
+  // more options: https://splidejs.com/options/
+  new Splide( '#splide', {
+    interval: parseInt("<%- theme.carousel.interval %>"),
+    speed: parseInt("<%- theme.carousel.speed %>"),
+    gap: parseInt("<%- theme.carousel.gap %>"),
+    padding: parseInt("<%- theme.carousel.padding %>"),
+    perPage: parseInt("<%- theme.carousel.perPage %>"),
+    start: parseInt("<%- theme.carousel.start %>"),
+    type: "<%- theme.carousel.type %>",
+    pagination: "<%- theme.carousel.pagination %>" == 'true',
+    autoplay: "<%- theme.carousel.autoplay %>" == 'true',
+    arrows: "<%- theme.carousel.arrows %>" == 'true',
+    pauseOnHover: "<%- theme.carousel.pauseOnHover %>" == 'true',
+    pauseOnFocus: "<%- theme.carousel.arrpauseOnFocusows %>" == 'true',
+    resetProgress: "<%- theme.carousel.resetProgress %>" == 'true',
+    keyboard: "<%- theme.carousel.keyboard %>"
+  }).mount();
 </script>
