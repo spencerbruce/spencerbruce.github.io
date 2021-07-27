@@ -53,6 +53,9 @@
 <link rel="stylesheet" href="/css/custom.css">
 
   
+<link rel="stylesheet" href="/css/splide.min.css">
+
+  
 <link rel="stylesheet" href="/css/prism-dark.css">
 
   
@@ -128,8 +131,20 @@
   <div class="container">
     <div class="row">
       <div>
-        <div class="row mb-1">
-  <div class="one column" style="max-width: 50px">
+        <div class="row mt-3 u-pull-right">
+  <div class="twelve columns u-pull-right">
+    
+    <a class="u-pull-right" href="/">Home</a>
+    <!-- 
+      
+        <a href="mailto:spencer@spencergb.me" target="_blank" class="ml">Email</a>
+      
+     -->
+  </div>
+</div>
+
+<div class="row mb-1 mt-0">
+  <div class="one column">
     <h1 class="mt-2 mode">
       <div onclick=setDarkMode(true) id="darkBtn">🌇</div>
       <div onclick=setDarkMode(false) id="lightBtn" class=hidden>🌃</div>
@@ -153,7 +168,6 @@
           if (localStorage.getItem('preferredTheme') == 'dark') {
             setDarkMode(true);
           }
-          
         });
       </script>
     </h1>
@@ -164,16 +178,6 @@
       hi, i&#39;m spencer
     </h1>
   </div>
-
-  <div class="five columns mt-3 u-pull-right">
-    
-    <a class="u-pull-right" href="/">Home</a>
-    <!-- 
-      
-        <a href="mailto:spencer@spencergb.me" target="_blank" class="ml">Email</a>
-      
-     -->
-  </div>
 </div>
 
 <hr style="margin-bottom: 2.6rem; margin-top: 1.6rem;">
@@ -181,52 +185,77 @@
         <div class="trans">
           <div class="row">
   <div class="five columns">
-    <div class="siema" style="margin: -10px -10px;">
-      
-        <img style="border-radius: 20px; padding: 10px 10px;" class="u-max-full-width" src="/images/headshot.jpg" alt="A photo of Spencer in front of Columbia University's Low Library. He is smiling, wearing a white collared shirt underneath a black sweater. On top of this he wears an unzipped light blue graduation gown. In the background you can see trees and the top of Riverside Church.">
-      
-        <img style="border-radius: 20px; padding: 10px 10px;" class="u-max-full-width" src="/images/1.jpg" alt="Blueberry favicon">
-      
-        <img style="border-radius: 20px; padding: 10px 10px;" class="u-max-full-width" src="/images/2.jpg" alt="Blueberry favicon">
-      
-        <img style="border-radius: 20px; padding: 10px 10px;" class="u-max-full-width" src="/images/3.jpg" alt="Blueberry favicon">
-      
-        <img style="border-radius: 20px; padding: 10px 10px;" class="u-max-full-width" src="/images/4.jpg" alt="Blueberry favicon">
-      
-        <img style="border-radius: 20px; padding: 10px 10px;" class="u-max-full-width" src="/images/5.jpg" alt="Blueberry favicon">
-      
-        <img style="border-radius: 20px; padding: 10px 10px;" class="u-max-full-width" src="/images/6.jpg" alt="Blueberry favicon">
-      
-        <img style="border-radius: 20px; padding: 10px 10px;" class="u-max-full-width" src="/images/7.jpg" alt="Blueberry favicon">
-      
+    <div id="splide" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          
+            <li class="splide__slide">
+              <img class="u-max-full-width" src="/images/headshot.jpg" alt="A photo of Spencer in front of Columbia University's Low Library. He is smiling, wearing a white collared shirt underneath a black sweater. On top of this he wears an unzipped light blue graduation gown. In the background you can see trees and the top of Riverside Church.">
+              <p class="desc" id="carousel-desc">I'm a python developer</p>
+            </li>
+          
+            <li class="splide__slide">
+              <img class="u-max-full-width" src="/images/1.jpg" alt="Blueberry favicon">
+              <p class="desc" id="carousel-desc">Placeholder 1</p>
+            </li>
+          
+            <li class="splide__slide">
+              <img class="u-max-full-width" src="/images/2.jpg" alt="Blueberry favicon">
+              <p class="desc" id="carousel-desc">Placeholder 2</p>
+            </li>
+          
+            <li class="splide__slide">
+              <img class="u-max-full-width" src="/images/3.jpg" alt="Blueberry favicon">
+              <p class="desc" id="carousel-desc">Placeholder 3</p>
+            </li>
+          
+            <li class="splide__slide">
+              <img class="u-max-full-width" src="/images/4.jpg" alt="Blueberry favicon">
+              <p class="desc" id="carousel-desc">Placeholder 4</p>
+            </li>
+          
+            <li class="splide__slide">
+              <img class="u-max-full-width" src="/images/5.jpg" alt="Blueberry favicon">
+              <p class="desc" id="carousel-desc">Placeholder 5</p>
+            </li>
+          
+            <li class="splide__slide">
+              <img class="u-max-full-width" src="/images/6.jpg" alt="Blueberry favicon">
+              <p class="desc" id="carousel-desc">Placeholder 6</p>
+            </li>
+          
+            <li class="splide__slide">
+              <img class="u-max-full-width" src="/images/7.jpg" alt="Blueberry favicon">
+              <p class="desc" id="carousel-desc">this is the new image</p>
+            </li>
+          
+        </ul>
+      </div>
     </div>
-    <!-- <button class="prev">prev</button> -->
-    <!-- <button class="next">next</button> -->
-    <p class="desc" id="carousel-desc">I'm a python developer</p>
   </div>  
 
   <div class="seven columns">
     <h2>
       
-        thanks for stopping by!<br>
+        thanks for stopping by ☺️<br>
       
         here&#39;s a bit about me:<br>
       
     </h2>
-    <!-- <h2><u>thanks for stopping by!,here&#39;s a bit about me:</u></h2> -->
+    <!-- <h2><u>thanks for stopping by ☺️,here&#39;s a bit about me:</u></h2> -->
     
-      <p>I am a recent graduate from Columbia University, where I recieved a B.S. in Computer Science on the Vision, Graphics, Interaction, &amp; Robotics track.</p>
+      <p>I graduated in April of 2021 from Columbia Engineering, where I received my B.S. in Computer Science on the Vision, Graphics, Interaction, &amp; Robotics track. I also minored in Sociology! 🎓📚</p>
     
-      <p>While a student, I had loads of fun exploring the creative process and diversified my courseload with sociology, sustainability, and manufacturing courses. Outside of the classroom, I filled my time mentoring students in my job as a TA, tinkering in our Makerspaces, and trying new sweets around the Big Apple.</p>
+      <p>While a student, I diversifed my tech-heavy courseload with sociology, sustainable development, and manufacturing design courses. Outside of the classroom, I spent my time helping fellow students in my job as a TA, tinkering in our Makerspaces, and trying new sweets 🍪 around the Big Apple. 🍎</p>
     
-      <p>My interests bring me too many niche topics to count, but some of my current favorites include: sustainability, crafting, baking, Thai food, reading, and running.</p>
+      <p>I&#39;m currently recovering from U.S. Open ballperson tryout rejection 🥺🎾 by planning a celebratory train ride across the U.S. once it&#39;s safe 🚞. Meanwhile, I hope to find work that utilizes + builds upon my skills and interests to help make this 🌎 a safer, more equitible place. Some of my current interests include: sustainability, baking, Thai food, reading, running, and crosswords.</p>
     
   </div>
 </div>
 
 <div class="row mt-2">
   <div class="twelve columns">
-    <p>Here on my website you can find a few of my featured projects. Please have a look around and drop me a line if you&#39;d like to collaborate!</p>
+    <p>Here on my website you can find a few of my featured projects. Please have a look around and drop me a line if you&#39;d like to chat!</p>
   </div>
 </div>
 
@@ -246,25 +275,35 @@
 <div class="row">
   <div class="six columns mb-3">
     
-      <a target="_blank" rel="noopener" href="https://observablehq.com/d/990ee1c78d4e9632">
+      <a target="_blank" rel="noopener" href="https://observablehq.com/d/bb382d50701a2bf4">
     
-      <img class="u-max-full-width" src="https://www.spencergb.me/images/covid-data1.gif" alt="A gif of the interaction with a parallel coordinate diagram. Each column represents one metric of data for each state, and the column can be rearranged by clicking and dragging on the column title. This redistributes the parallel coordinate chart accordingly. Hovering over a line (state) reveals a tooltip with that state's selected demographic and COVID-19 information."> 
-      COVID-19 + State-Level Demographics Dashboard
+      <img class="u-max-full-width" src="https://www.spencergb.me/images/spotify.gif" alt="A gif of the interaction with a multi-line chart that depicts the number of Spotify streams for each song encoded in one line. The lines are color-coded as dark blue when the song is trending on TikTok, light blue when the song is not trending on TikTok, and orange when the song has never trended on TikTok. There is the ability to scroll left and right through time, hover over a date in the span of time, and zoom in to see more detail."> 
+      TikTok on the Spot
     </a>
-    <p class="desc">A parallel coordinate dashboard to explore potential links between a state's demographics + COVID-19 vaccine data with their case numbers.</p>
+    <p class="desc">An interactive depicting the link between Spotify streams and TikTok audio popularity.</p>
   </div>
   <div class="six columns mb-3">
     
-      <a target="_blank" rel="noopener" href="https://observablehq.com/d/bb382d50701a2bf4">
+      <a target="_blank" rel="noopener" href="https://observablehq.com/d/990ee1c78d4e9632">
     
-      <img class="u-max-full-width" src="https://www.spencergb.me/images/spotify1.gif" alt="A gif of the interaction with a multi-line chart that depicts the number of Spotify streams for each song encoded in one line. The lines are color-coded as dark blue when the song is trending on TikTok, light blue when the song is not trending on TikTok, and orange when the song has never trended on TikTok. There is the ability to scroll left and right through time, hover over a date in the span of time, and zoom in to see more detail."> 
-      TikTok on the Spot
+      <img class="u-max-full-width" src="https://www.spencergb.me/images/covid-data.gif" alt="A gif of the interaction with a parallel coordinate diagram. Each column represents one metric of data for each state, and the column can be rearranged by clicking and dragging on the column title. This redistributes the parallel coordinate chart accordingly. Hovering over a line (state) reveals a tooltip with that state's selected demographic and COVID-19 information."> 
+      COVID-19 + State-Level Demographics Dashboard
     </a>
-    <p class="desc">An interactive visualization depicting the link between Spotify streams and TikTok audio popularity.</p>
+    <p class="desc">A dashboard to explore potential links between various state demographics + COVID-19 data.</p>
   </div>
 </div>
 
 
+
+<div class="row">
+  <div class="six columns mb-3 offset-by-three">
+    <a href="/WURPIT/" class="bottom"> 
+      <img class="u-max-full-width" src="https://www.spencergb.me/images/wurpit.gif" alt="A gif of the interaction with a schedling page. On the first page, circular progress arcs can be seen on the left depicting the user's progress through their major. Then, on the right, an interactive checklist depicts which requirement(s) are needed to satisfy different track requirements for the student. On the page to the right, a weekly planner is shown on the right and a shortlist of classes can be filtered and searched on the left."> 
+      UI/UX Design User Study
+    </a>
+    <p class="desc">A final project where Sam Ross, Nadia Jurkovich, Vishnu Nair, and myself conducted user studies, designed, and iterated on an idea for a new course scheduling interface for our college.</p>
+  </div>
+</div>
 
 
 <!-- <div class="row">
@@ -274,28 +313,25 @@
 </div> -->
 
 <!-- <h4> <a href="/archives">All Posts</a></h4> -->
-<script src="/js/siema.min.js"></script>
+<script src="/js/splide.min.js"></script>
 <script>
-  const desc = [{"image":"/images/headshot.jpg","image_alt":"A photo of Spencer in front of Columbia University's Low Library. He is smiling, wearing a white collared shirt underneath a black sweater. On top of this he wears an unzipped light blue graduation gown. In the background you can see trees and the top of Riverside Church.","description":"I'm a python developer"},{"image":"/images/1.jpg","image_alt":"Blueberry favicon","description":"Placeholder 1"},{"image":"/images/2.jpg","image_alt":"Blueberry favicon","description":"Placeholder 2"},{"image":"/images/3.jpg","image_alt":"Blueberry favicon","description":"Placeholder 3"},{"image":"/images/4.jpg","image_alt":"Blueberry favicon","description":"Placeholder 4"},{"image":"/images/5.jpg","image_alt":"Blueberry favicon","description":"Placeholder 5"},{"image":"/images/6.jpg","image_alt":"Blueberry favicon","description":"Placeholder 6"},{"image":"/images/7.jpg","image_alt":"Blueberry favicon","description":"this is the new image"}];
-    const mySiema = new Siema({
-      selector: ".siema",
-      duration: parseInt("1000"),
-      easing: "ease-in-out",
-      perPage: parseInt("1"),
-      startIndex: parseInt("0"),
-      draggable: "true" == 'true',
-      multipleDrag: "true" == 'true',
-      threshold: parseInt("20"),
-      loop: "true" == 'true',
-      rtl: false,
-      onInit: () => {},
-      onChange: () => {
-        document.getElementById("carousel-desc").innerHTML = desc[mySiema.currentSlide]["description"];
-      },
-    });
-    setInterval(() => mySiema.next(), parseInt("4000"),);
-    // document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
-    // document.querySelector('.next').addEventListener('click', () => mySiema.next())
+  // more options: https://splidejs.com/options/
+  new Splide( '#splide', {
+    interval: parseInt("4000"),
+    speed: parseInt("1500"),
+    gap: parseInt("0"),
+    padding: parseInt("0"),
+    perPage: parseInt("1"),
+    start: parseInt("0"),
+    type: "fade",
+    pagination: "false" == 'true',
+    autoplay: "true" == 'true',
+    arrows: "false" == 'true',
+    pauseOnHover: "true" == 'true',
+    pauseOnFocus: "" == 'true',
+    resetProgress: "false" == 'true',
+    keyboard: "global"
+  }).mount();
 </script>
           <div class="row mt-2">
   

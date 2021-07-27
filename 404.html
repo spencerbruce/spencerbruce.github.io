@@ -53,6 +53,9 @@
 <link rel="stylesheet" href="/css/custom.css">
 
   
+<link rel="stylesheet" href="/css/splide.min.css">
+
+  
 <link rel="stylesheet" href="/css/prism-dark.css">
 
   
@@ -128,8 +131,20 @@
   <div class="container">
     <div class="row">
       <div>
-        <div class="row mb-1">
-  <div class="one column" style="max-width: 50px">
+        <div class="row mt-3 u-pull-right">
+  <div class="twelve columns u-pull-right">
+    
+    <a class="u-pull-right" href="/">Home</a>
+    <!-- 
+      
+        <a href="mailto:spencer@spencergb.me" target="_blank" class="ml">Email</a>
+      
+     -->
+  </div>
+</div>
+
+<div class="row mb-1 mt-0">
+  <div class="one column">
     <h1 class="mt-2 mode">
       <div onclick=setDarkMode(true) id="darkBtn">🌇</div>
       <div onclick=setDarkMode(false) id="lightBtn" class=hidden>🌃</div>
@@ -153,7 +168,6 @@
           if (localStorage.getItem('preferredTheme') == 'dark') {
             setDarkMode(true);
           }
-          
         });
       </script>
     </h1>
@@ -163,16 +177,6 @@
     <h1 class="mt-2">
       hi, i&#39;m spencer
     </h1>
-  </div>
-
-  <div class="five columns mt-3 u-pull-right">
-    
-    <a class="u-pull-right" href="/">Home</a>
-    <!-- 
-      
-        <a href="mailto:spencer@spencergb.me" target="_blank" class="ml">Email</a>
-      
-     -->
   </div>
 </div>
 
