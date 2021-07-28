@@ -14,8 +14,10 @@ img {
   border-radius: 10px;
 }            
 
-/* used for hoverable images */
-.img-container { position: relative; }
+/* used for img -> hover -> gif */
+.img-container { 
+  position: relative; 
+}
 
 .img-container .top {
   position: absolute;
