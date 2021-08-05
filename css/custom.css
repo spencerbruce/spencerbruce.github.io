@@ -42,7 +42,8 @@ body.darkmode img {
 }
 
 .img-container:hover .top {
-  opacity: 0;
+  z-index: -1;
+  /* opacity: 0; */
 }
 
 @media (min-width: 550px) {
@@ -111,6 +112,9 @@ body.darkmode img {
   margin-block-start: 0px;
   margin-block-end: 0px;
   margin-bottom: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 
 .mb-1 {
