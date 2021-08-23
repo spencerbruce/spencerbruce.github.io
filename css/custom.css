@@ -15,9 +15,25 @@ img {
 }   
 
 body.darkmode img {
-  -webkit-box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); 
-  -moz-box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); 
+  -moz-box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.img-dark {
+  opacity: 0;
+}
+
+body.darkmode .img-dark {
+  opacity: 1;
+}
+
+.img-light {
+  opacity: 1;
+}
+
+body.darkmode .img-light {
+  opacity: 0.0;
 }
 
 .shadow {
@@ -112,6 +128,15 @@ body.darkmode img {
   margin-block-start: 0px;
   margin-block-end: 0px;
   margin-bottom: 0px;
+}
+
+.no-shadow {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+body.darkmode .no-shadow {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;

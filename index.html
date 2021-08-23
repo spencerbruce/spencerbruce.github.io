@@ -134,53 +134,53 @@
       <div>
         <div class="row mt-3 u-pull-right">
   <div class="twelve columns u-pull-right">
-    
-    <a class="u-pull-right" href="/">Home</a>
+    <a class="ml u-pull-right" href="/">Home</a>
     
       
-        <a href="mailto:spencer@spencergb.me" target="_blank" class="mr u-pull-right">Email</a>
+        <a href="mailto:spencer@spencergb.me" target="_blank" class="ml u-pull-right">Email</a>
       
     
-    <a class="mr u-pull-right" target="_blank" rel="noopener" href="https://ko-fi.com/spencergb">Ko-fi</a>
+    <a class="ml u-pull-right" target="_blank" rel="noopener" href="https://ko-fi.com/spencergb">Ko-fi</a>
     
   </div>
 </div>
 
 <div class="row mb-1 mt-0">
-  <div class="one column">
-    <h1 class="mt-2 mode">
-      <div onclick=setDarkMode(true) id="darkBtn">🌇</div>
-      <div onclick=setDarkMode(false) id="lightBtn" class=hidden>🌃</div>
-      <script >
-        function setDarkMode(isDark) {
-            var darkBtn = document.getElementById('darkBtn')
-            var lightBtn = document.getElementById('lightBtn')
-            if (isDark) {
-              lightBtn.style.display = "block"
-              darkBtn.style.display = "none"
-              localStorage.setItem('preferredTheme', 'dark');
-            } else {
-              lightBtn.style.display = "none"
-              darkBtn.style.display = "block"
-              localStorage.removeItem('preferredTheme');
-            } 
-            document.getElementsByClassName("email")[0].classList.toggle("email-darkmode"); 
-            document.body.classList.toggle("darkmode");
-        }
-        window.addEventListener('load', function() {
-          if (localStorage.getItem('preferredTheme') == 'dark') {
-            setDarkMode(true);
+    <div class="one column">
+      <h1 class="mt-2 mode">
+        <div onclick=setDarkMode(true) id="darkBtn">🌇</div>
+        <div onclick=setDarkMode(false) id="lightBtn" class=hidden>🌃</div>
+        <script >
+          function setDarkMode(isDark) {
+              var darkBtn = document.getElementById('darkBtn')
+              var lightBtn = document.getElementById('lightBtn')
+              if (isDark) {
+                lightBtn.style.display = "block"
+                darkBtn.style.display = "none"
+                localStorage.setItem('preferredTheme', 'dark');
+              } else {
+                lightBtn.style.display = "none"
+                darkBtn.style.display = "block"
+                localStorage.removeItem('preferredTheme');
+              } 
+              document.getElementsByClassName("email")[0].classList.toggle("email-darkmode"); 
+              document.body.classList.toggle("darkmode");
           }
-        });
-      </script>
-    </h1>
-  </div>
+          window.addEventListener('load', function() {
+            if (localStorage.getItem('preferredTheme') == 'dark') {
+              setDarkMode(true);
+            }
+          });
+        </script>
+      </h1>
+    </div>
 
-  <div class="six columns ml-1">
-    <h1 class="mt-2">
-      hi, i&#39;m spencer
-    </h1>
-  </div>
+    <div class="six columns ml-1">
+      <h1 class="mt-2">
+        hi, i&#39;m spencer
+      </h1>
+    </div>
+
 </div>
 
 <hr style="margin-bottom: 2.6rem; margin-top: 1.6rem;">
@@ -390,7 +390,7 @@
     
       <div class="img-container u-max-full-width">
         <img class="top" src="https://www.spencergb.me/images/covid-screen.PNG" alt="A gif of the interaction with a parallel coordinate diagram. Each column represents one metric of data for each state, and the column can be rearranged by clicking and dragging on the column title. This redistributes the parallel coordinate chart accordingly. Hovering over a line (state) reveals a tooltip with that state's selected demographic and COVID-19 information.">
-        <img class="bottom" src="https://www.spencergb.me/images/covid-data.gif" alt="A gif of the interaction with a parallel coordinate diagram. Each column represents one metric of data for each state, and the column can be rearranged by clicking and dragging on the column title. This redistributes the parallel coordinate chart accordingly. Hovering over a line (state) reveals a tooltip with that state's selected demographic and COVID-19 information.">
+        <img class="bottom no-shadow" src="https://www.spencergb.me/images/covid-data.gif" alt="A gif of the interaction with a parallel coordinate diagram. Each column represents one metric of data for each state, and the column can be rearranged by clicking and dragging on the column title. This redistributes the parallel coordinate chart accordingly. Hovering over a line (state) reveals a tooltip with that state's selected demographic and COVID-19 information.">
       </div>
       COVID-19 + State-Level Demographics Dashboard
     </a>
@@ -402,7 +402,7 @@
     
       <div class="img-container u-max-full-width">
         <img class="top" src="https://www.spencergb.me/images/greensale.jpeg" alt="A green rectangle has the Columbia Ecoreps logo in the center. When hovered over, a gif plays. The gif shows a panning shot over a large room filled with belongings for sale. It is the Green Sale, held annually during move in to help students find low-cost pre-loved dorm room supplies, decorations, and textbooks.">
-        <img class="bottom" src="https://www.spencergb.me/images/greensale.gif" alt="A green rectangle has the Columbia Ecoreps logo in the center. When hovered over, a gif plays. The gif shows a panning shot over a large room filled with belongings for sale. It is the Green Sale, held annually during move in to help students find low-cost pre-loved dorm room supplies, decorations, and textbooks.">
+        <img class="bottom no-shadow" src="https://www.spencergb.me/images/greensale.gif" alt="A green rectangle has the Columbia Ecoreps logo in the center. When hovered over, a gif plays. The gif shows a panning shot over a large room filled with belongings for sale. It is the Green Sale, held annually during move in to help students find low-cost pre-loved dorm room supplies, decorations, and textbooks.">
       </div>
       EcoReps Greensale + Recycling Committee
     </a>
@@ -417,7 +417,7 @@
     
       <div class="img-container u-max-full-width">
         <img class="top" src="https://www.spencergb.me/images/spyder-full.JPG" alt="A CAD mockup of a four-legged spherical robot. When hovering your mouse over this image, a GIF plays of Spencer holding one leg of this robot as it moves through a crawling walk cycle.">
-        <img class="bottom" src="https://www.spencergb.me/images/robot-leg.gif" alt="A CAD mockup of a four-legged spherical robot. When hovering your mouse over this image, a GIF plays of Spencer holding one leg of this robot as it moves through a crawling walk cycle.">
+        <img class="bottom no-shadow" src="https://www.spencergb.me/images/robot-leg.gif" alt="A CAD mockup of a four-legged spherical robot. When hovering your mouse over this image, a GIF plays of Spencer holding one leg of this robot as it moves through a crawling walk cycle.">
       </div>
       Quadruped Robot
     </a>
@@ -425,38 +425,11 @@
   </div>
   <div class="six columns mb-3">
     
-      <a target="_blank" rel="noopener" href="https://www.columbiaspectator.com">
-    
-      <div class="img-container u-max-full-width">
-        <img class="top" src="https://www.spencergb.me/images/spectator.jpeg" alt="A blue image with the Columbia Daily Spectator logo is shown. When hovered over, a gif plays where a mouse hovers over an interactive data vizualization with paired histograms. The graph shows the top five majors in Columbia College and Columbia Engineering.">
-        <img class="bottom" src="https://www.spencergb.me/images/spectator.gif" alt="A blue image with the Columbia Daily Spectator logo is shown. When hovered over, a gif plays where a mouse hovers over an interactive data vizualization with paired histograms. The graph shows the top five majors in Columbia College and Columbia Engineering.">
-      </div>
-      Columbia Daily Spectator
-    </a>
-    <p class="desc">In college, I worked with Columbia Daily Spectator in bringing creative data viz and illustration to both print and our website.</p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="six columns mb-3">
-    
-      <a target="_blank" rel="noopener" href="https://observablehq.com/d/bb382d50701a2bf4">
-    
-      <div class="img-container u-max-full-width">
-        <img class="top" src="https://www.spencergb.me/images/tiktok-screen.PNG" alt="A gif of the interaction with a multi-line chart that depicts the number of Spotify streams for each song encoded in one line. The lines are color-coded as dark blue when the song is trending on TikTok, light blue when the song is not trending on TikTok, and orange when the song has never trended on TikTok. There is the ability to scroll left and right through time, hover over a date in the span of time, and zoom in to see more detail.">
-        <img class="bottom" src="https://www.spencergb.me/images/spotify.gif" alt="A gif of the interaction with a multi-line chart that depicts the number of Spotify streams for each song encoded in one line. The lines are color-coded as dark blue when the song is trending on TikTok, light blue when the song is not trending on TikTok, and orange when the song has never trended on TikTok. There is the ability to scroll left and right through time, hover over a date in the span of time, and zoom in to see more detail.">
-      </div>
-      TikTok on the Spot
-    </a>
-    <p class="desc">An interactive depicting the link between Spotify streams and TikTok audio popularity.</p>
-  </div>
-  <div class="six columns mb-3">
-    
       <a target="_blank" rel="noopener" href="https://youtu.be/RzfXLyuWv6I">
     
       <div class="img-container u-max-full-width">
         <img class="top" src="https://www.spencergb.me/images/mario.jpeg" alt="A screencapture from Mario Kart is seen, with a faded triangle play button in the center. When hovered, a gif plays that shows Baby Mario driving around the Baby Park course. From the corners of the screen, photos of Karl Marx, Friedrich Engels, Max Weber, and Émile Durkheim emerge.">
-        <img class="bottom" src="https://www.spencergb.me/images/mario.gif" alt="A screencapture from Mario Kart is seen, with a faded triangle play button in the center. When hovered, a gif plays that shows Baby Mario driving around the Baby Park course. From the corners of the screen, photos of Karl Marx, Friedrich Engels, Max Weber, and Émile Durkheim emerge.">
+        <img class="bottom no-shadow" src="https://www.spencergb.me/images/mario.gif" alt="A screencapture from Mario Kart is seen, with a faded triangle play button in the center. When hovered, a gif plays that shows Baby Mario driving around the Baby Park course. From the corners of the screen, photos of Karl Marx, Friedrich Engels, Max Weber, and Émile Durkheim emerge.">
       </div>
       Sociology Video Essays
     </a>
@@ -467,11 +440,38 @@
 <div class="row">
   <div class="six columns mb-3">
     
+      <a target="_blank" rel="noopener" href="https://www.columbiaspectator.com">
+    
+      <div class="img-container u-max-full-width">
+        <img class="top" src="https://www.spencergb.me/images/spectator.jpeg" alt="A blue image with the Columbia Daily Spectator logo is shown. When hovered over, a gif plays where a mouse hovers over an interactive data vizualization with paired histograms. The graph shows the top five majors in Columbia College and Columbia Engineering.">
+        <img class="bottom no-shadow" src="https://www.spencergb.me/images/spectator.gif" alt="A blue image with the Columbia Daily Spectator logo is shown. When hovered over, a gif plays where a mouse hovers over an interactive data vizualization with paired histograms. The graph shows the top five majors in Columbia College and Columbia Engineering.">
+      </div>
+      Columbia Daily Spectator
+    </a>
+    <p class="desc">In college, I worked with Columbia Daily Spectator in bringing creative data viz and illustration to both print and our website.</p>
+  </div>
+  <div class="six columns mb-3">
+    
+      <a target="_blank" rel="noopener" href="https://observablehq.com/d/bb382d50701a2bf4">
+    
+      <div class="img-container u-max-full-width">
+        <img class="top" src="https://www.spencergb.me/images/tiktok-screen.PNG" alt="A gif of the interaction with a multi-line chart that depicts the number of Spotify streams for each song encoded in one line. The lines are color-coded as dark blue when the song is trending on TikTok, light blue when the song is not trending on TikTok, and orange when the song has never trended on TikTok. There is the ability to scroll left and right through time, hover over a date in the span of time, and zoom in to see more detail.">
+        <img class="bottom no-shadow" src="https://www.spencergb.me/images/spotify.gif" alt="A gif of the interaction with a multi-line chart that depicts the number of Spotify streams for each song encoded in one line. The lines are color-coded as dark blue when the song is trending on TikTok, light blue when the song is not trending on TikTok, and orange when the song has never trended on TikTok. There is the ability to scroll left and right through time, hover over a date in the span of time, and zoom in to see more detail.">
+      </div>
+      TikTok on the Spot
+    </a>
+    <p class="desc">An interactive depicting the link between Spotify streams and TikTok audio popularity.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="six columns mb-3">
+    
       <a href="/WURPIT/">
     
       <div class="img-container u-max-full-width">
         <img class="top" src="https://www.spencergb.me/images/wurpit-cover.png" alt="A gif of the interaction with a schedling page. On the first page, circular progress arcs can be seen on the left depicting the user's progress through their major. Then, on the right, an interactive checklist depicts which requirement(s) are needed to satisfy different track requirements for the student. On the page to the right, a weekly planner is shown on the right and a shortlist of classes can be filtered and searched on the left.">
-        <img class="bottom" src="https://www.spencergb.me/images/wurpit.gif" alt="A gif of the interaction with a schedling page. On the first page, circular progress arcs can be seen on the left depicting the user's progress through their major. Then, on the right, an interactive checklist depicts which requirement(s) are needed to satisfy different track requirements for the student. On the page to the right, a weekly planner is shown on the right and a shortlist of classes can be filtered and searched on the left.">
+        <img class="bottom no-shadow" src="https://www.spencergb.me/images/wurpit.gif" alt="A gif of the interaction with a schedling page. On the first page, circular progress arcs can be seen on the left depicting the user's progress through their major. Then, on the right, an interactive checklist depicts which requirement(s) are needed to satisfy different track requirements for the student. On the page to the right, a weekly planner is shown on the right and a shortlist of classes can be filtered and searched on the left.">
       </div>
       UI/UX Design User Study
     </a>
@@ -483,7 +483,7 @@
     
       <div class="img-container u-max-full-width">
         <img class="top" src="https://www.spencergb.me/images/CES-mask.jpeg" alt="A picture of a COVID-19 facemask with strips of LEDs along the front. The picture is animated to show how the mask lights up and each of the individual LEDs can display its own color. The mask writes out the letters C E S, and below the mask is a blue rectangle with a joystick on the left and two square buttons on the right. This controller has a switch near the bottom edge and wires poking out of the bottom.">
-        <img class="bottom" src="https://www.spencergb.me/images/CES-mask.gif" alt="A picture of a COVID-19 facemask with strips of LEDs along the front. The picture is animated to show how the mask lights up and each of the individual LEDs can display its own color. The mask writes out the letters C E S, and below the mask is a blue rectangle with a joystick on the left and two square buttons on the right. This controller has a switch near the bottom edge and wires poking out of the bottom.">
+        <img class="bottom no-shadow" src="https://www.spencergb.me/images/CES-mask.gif" alt="A picture of a COVID-19 facemask with strips of LEDs along the front. The picture is animated to show how the mask lights up and each of the individual LEDs can display its own color. The mask writes out the letters C E S, and below the mask is a blue rectangle with a joystick on the left and two square buttons on the right. This controller has a switch near the bottom edge and wires poking out of the bottom.">
       </div>
       LED Facemask
     </a>
@@ -500,7 +500,7 @@
     
       <div class="img-container u-max-full-width">
         <img class="top" src="https://www.spencergb.me/images/polanding.jpeg" alt="A Poland flag is partially obscured by the color blue, except in the center where the outline of the Twitter logo bird is seen. Hovering over this image plays a gif where the frame zooms into different red-white boundaries in a random image of a kitchen.">
-        <img class="bottom" src="https://www.spencergb.me/images/polanding.gif" alt="A Poland flag is partially obscured by the color blue, except in the center where the outline of the Twitter logo bird is seen. Hovering over this image plays a gif where the frame zooms into different red-white boundaries in a random image of a kitchen.">
+        <img class="bottom no-shadow" src="https://www.spencergb.me/images/polanding.gif" alt="A Poland flag is partially obscured by the color blue, except in the center where the outline of the Twitter logo bird is seen. Hovering over this image plays a gif where the frame zooms into different red-white boundaries in a random image of a kitchen.">
       </div>
       Polanding Twitter Bot
     </a>
